@@ -79,12 +79,12 @@
         </div>
 
         <!-- Proposed panel -->
-        <h2 class="heading-display text-2xl text-ink-950 mb-6">
+        <h2 id="panel-title" class="heading-display text-2xl text-ink-950 mb-6">
           {{ locale === 'es' ? 'Panel propuesto para la rebiopsia' : 'Proposed re-biopsy panel' }}
         </h2>
         <div class="card-base overflow-hidden mb-14">
           <div class="overflow-x-auto -mx-6 sm:-mx-8 px-6 sm:px-8">
-            <table class="w-full text-sm">
+            <table class="w-full text-sm" aria-labelledby="panel-title">
               <caption class="sr-only">{{ locale === 'es' ? 'Panel de rebiopsia propuesto: componentes, métodos, dianas e implicación clínica' : 'Proposed re-biopsy panel: components, methods, targets and clinical implication' }}</caption>
               <thead>
                 <tr class="border-b-2 border-ink-200">

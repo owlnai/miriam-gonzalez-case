@@ -1,11 +1,11 @@
 <template>
   <div class="card-base overflow-hidden">
-    <h3 class="font-display font-semibold text-ink-900 text-lg mb-6">
+    <h3 id="perfil-molecular-title" class="font-display font-semibold text-ink-900 text-lg mb-6">
       {{ locale === 'es' ? 'Perfil molecular (TSO500, tejido primario 2024)' : 'Molecular profile (TSO500, primary tissue 2024)' }}
     </h3>
 
     <div class="overflow-x-auto -mx-6 sm:-mx-8 px-6 sm:px-8">
-      <table class="w-full text-sm">
+      <table class="w-full text-sm" aria-labelledby="perfil-molecular-title">
         <caption class="sr-only">{{ locale === 'es' ? 'Perfil molecular: marcadores, resultados y notas clínicas del análisis TSO500' : 'Molecular profile: markers, results and clinical notes from TSO500 analysis' }}</caption>
         <thead>
           <tr class="border-b-2 border-ink-200">
