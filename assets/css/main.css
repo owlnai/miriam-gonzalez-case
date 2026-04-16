@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Skip link — visually hidden until focused */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    z-index: 9999;
+    padding: 8px 16px;
+    background: theme('colors.ink.950'); /* #1f1933 — contraste ~15:1 con blanco */
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0 0 8px 0;
+    transition: top 0.15s ease;
+  }
+  .skip-link:focus {
+    top: 0;
+  }
+
+  body {
+    @apply font-body text-ink-800 bg-ink-50;
+  }
+
+  ::selection {
+    @apply bg-gold-200 text-ink-950;
+  }
+
+  /* Subtle grain texture overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.015;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-4xl mx-auto px-6 sm:px-8 lg:px-12;
+  }
+
+  .section-wide {
+    @apply max-w-6xl mx-auto px-6 sm:px-8 lg:px-12;
+  }
+
+  .section-spacing {
+    @apply py-20 sm:py-28;
+  }
+
+  .heading-display {
+    @apply font-display font-semibold tracking-tight;
+  }
+
+  .gold-accent {
+    @apply relative inline-block;
+  }
+  .gold-accent::after {
+    content: '';
+    /* gold-600 sobre ink-50: (0.988+0.05)/(0.079+0.05) = 8.1:1 → pasa non-text 3:1 ✓ */
+    @apply absolute -bottom-1 left-0 w-full h-[3px] bg-gold-600 rounded-full;
+  }
+
+  .card-base {
+    @apply bg-white/70 backdrop-blur-sm border border-ink-200/60 rounded-2xl p-6 sm:p-8;
+    @apply shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_rgba(0,0,0,0.03)];
+  }
+
+  .tag {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-2xs font-medium tracking-wide uppercase;
+  }
+
+  .tag-gold {
+    @apply tag bg-gold-100 text-gold-800 border border-gold-200;
+  }
+
+  .tag-ocean {
+    @apply tag bg-ocean-50 text-ocean-800 border border-ocean-200;
+  }
+
+  /* Animated underline for links */
+  .link-underline {
+    @apply relative text-ocean-700 font-medium;
+    /* gold-600 sobre ink-50: 8.1:1 → pasa non-text 3:1 ✓ */
+    background-image: linear-gradient(theme('colors.gold.600'), theme('colors.gold.600'));
+    background-size: 0% 2px;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease;
+  }
+  .link-underline:hover {
+    background-size: 100% 2px;
+  }
+}
+
+/* Fade-in animation for sections — only when user hasn't requested reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.6s ease-out both;
+  }
+
+  /* Staggered children */
+  .stagger-children > * {
+    animation: fade-up 0.5s ease-out both;
+  }
+  .stagger-children > *:nth-child(1) { animation-delay: 0.05s; }
+  .stagger-children > *:nth-child(2) { animation-delay: 0.1s; }
+  .stagger-children > *:nth-child(3) { animation-delay: 0.15s; }
+  .stagger-children > *:nth-child(4) { animation-delay: 0.2s; }
+  .stagger-children > *:nth-child(5) { animation-delay: 0.25s; }
+  .stagger-children > *:nth-child(6) { animation-delay: 0.3s; }
+}

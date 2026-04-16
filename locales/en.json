@@ -1,0 +1,80 @@
+{
+  "site": {
+    "title": "Miriam González",
+    "subtitle": "Searching for a Precision Oncology with AI"
+  },
+  "nav": {
+    "home": "Home",
+    "science": "The Science",
+    "team": "Team",
+    "timeline": "Timeline",
+    "story": "Story",
+    "contact": "Contact",
+    "donate": "Donate",
+    "main_label": "Primary navigation",
+    "mobile_label": "Mobile navigation",
+    "footer_label": "Site navigation",
+    "open_menu": "Open menu",
+    "close_menu": "Close menu",
+    "switch_to_es": "Switch to Spanish",
+    "skip_to_content": "Skip to main content",
+    "main_content_label": "Main content"
+  },
+  "hero": {
+    "tagline": "BC-NED + FGFR1 × 13",
+    "title": "When guidelines fall short, biology leads.",
+    "subtitle": "Metastatic breast cancer with neuroendocrine differentiation and FGFR1 amplification. One patient, an international team, and artificial intelligence seeking the therapy that standard oncology doesn't address.",
+    "cta_donate": "Support the cause",
+    "cta_science": "See the science",
+    "section_label": "Case overview"
+  },
+  "gofundme": {
+    "title": "Why do we need your help?",
+    "subtitle": "Every contribution brings Miriam closer to a molecular biopsy that could change her treatment and set a precedent for other patients.",
+    "what_title": "What are we funding?",
+    "what_items": [
+      "Bone re-biopsy with advanced molecular profiling",
+      "Extended and functional immunohistochemistry (p-AKT, p-ERK, SSTR2)",
+      "Functional proteomics (RPPA) if feasible",
+      "International second opinions"
+    ],
+    "why_title": "Why isn't this covered by public healthcare?",
+    "why_text": "Current clinical guidelines classify this tumor as \"standard HR+\", but its real biology — with 80% neuroendocrine differentiation and FGFR1 amplification — requires precision tests that are not included in the protocol. Without these tests, Miriam receives the same treatment as a patient with a completely different tumor.",
+    "transparency_title": "Full transparency",
+    "transparency_text": "Every expense is publicly documented. Quotes are requested from recognized centers (NMI-TT Germany, MD Anderson Madrid, VHIO Barcelona) and shared with the community."
+  },
+  "science": {
+    "title": "The science behind the case",
+    "subtitle": "An ultra-rare molecular profile that challenges current clinical guidelines"
+  },
+  "team": {
+    "title": "The team",
+    "subtitle": "A multidisciplinary group that formed spontaneously around a common goal"
+  },
+  "timeline": {
+    "title": "Timeline",
+    "subtitle": "Week by week, every milestone matters"
+  },
+  "story": {
+    "title": "Miriam's story",
+    "subtitle": "Far beyond the diagnosis"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "If you're an oncologist, researcher, journalist, or simply want to help",
+    "email_label": "Email",
+    "twitter_label": "X / Twitter",
+    "linkedin_label": "LinkedIn",
+    "gofundme_label": "GoFundMe",
+    "message": "If you have relevant information about clinical trials, medical contacts, or want to collaborate in any way, don't hesitate to reach out."
+  },
+  "footer": {
+    "disclaimer": "This site is an informational resource maintained by the patient's support team. It does not replace professional medical advice.",
+    "updated": "Last updated",
+    "nav_heading": "Navigation",
+    "social_heading": "Social",
+    "made_with": "Made with care, science, and a lot of AI.",
+    "site_header": "Site header",
+    "site_footer": "Site footer"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "beyond-the-protocol",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/content": "^3.5.0",
+    "@nuxtjs/i18n": "^9.5.0",
+    "better-sqlite3": "^12.8.0",
+    "nuxt": "^3.17.0",
+    "vue": "^3.5.0",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@nuxt/icon": "^1.12.0",
+    "@nuxtjs/tailwindcss": "^6.13.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "typescript": "^5.7.0"
+  },
+  "packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319"
+}

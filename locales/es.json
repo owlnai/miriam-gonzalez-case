@@ -1,0 +1,80 @@
+{
+  "site": {
+    "title": "Miriam González",
+    "subtitle": "Oncología de Precisión con IA"
+  },
+  "nav": {
+    "home": "Inicio",
+    "science": "La Ciencia",
+    "team": "Equipo",
+    "timeline": "Timeline",
+    "story": "Historia",
+    "contact": "Contacto",
+    "donate": "Donar",
+    "main_label": "Navegación principal",
+    "mobile_label": "Navegación móvil",
+    "footer_label": "Navegación del sitio",
+    "open_menu": "Abrir menú",
+    "close_menu": "Cerrar menú",
+    "switch_to_en": "Cambiar a inglés",
+    "skip_to_content": "Ir al contenido principal",
+    "main_content_label": "Contenido principal"
+  },
+  "hero": {
+    "tagline": "BC-NED + FGFR1 × 13",
+    "title": "Cuando las guías no bastan, la biología lidera.",
+    "subtitle": "Cáncer de mama metastásico con diferenciación neuroendocrina y amplificación FGFR1. Una paciente, un equipo internacional, e inteligencia artificial buscando la terapia que la oncología estándar no contempla.",
+    "cta_donate": "Apoyar la causa",
+    "cta_science": "Ver la ciencia",
+    "section_label": "Presentación del caso"
+  },
+  "gofundme": {
+    "title": "¿Por qué necesitamos tu ayuda?",
+    "subtitle": "Cada euro acerca a Miriam a una biopsia molecular que puede cambiar su tratamiento y sentar un precedente para otros pacientes.",
+    "what_title": "¿Qué financiamos?",
+    "what_items": [
+      "Rebiopsia ósea con perfilado molecular avanzado",
+      "Inmunohistoquímica extendida y funcional (p-AKT, p-ERK, SSTR2)",
+      "Proteómica funcional (RPPA) si es viable",
+      "Segundas opiniones internacionales"
+    ],
+    "why_title": "¿Por qué no lo cubre la sanidad pública?",
+    "why_text": "Las guías clínicas actuales clasifican este tumor como \"HR+ estándar\", pero su biología real — con un 80% de diferenciación neuroendocrina y amplificación FGFR1 — exige pruebas de precisión que no están incluidas en el protocolo. Sin estas pruebas, Miriam recibe el mismo tratamiento que una paciente con un tumor completamente distinto.",
+    "transparency_title": "Máxima transparencia",
+    "transparency_text": "Cada gasto se documenta públicamente. Los presupuestos se solicitan a centros reconocidos (NMI-TT Alemania, MD Anderson Madrid, VHIO Barcelona) y se comparten con la comunidad."
+  },
+  "science": {
+    "title": "La ciencia detrás del caso",
+    "subtitle": "Un perfil molecular ultra-raro que desafía las guías clínicas actuales"
+  },
+  "team": {
+    "title": "El equipo",
+    "subtitle": "Un grupo multidisciplinar que se formó de manera espontánea en torno a un objetivo común"
+  },
+  "timeline": {
+    "title": "Cronología",
+    "subtitle": "Semana a semana, cada hito importa"
+  },
+  "story": {
+    "title": "La historia de Miriam",
+    "subtitle": "Mucho más allá del diagnóstico"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Si eres oncólogo, investigador, periodista o simplemente quieres ayudar",
+    "email_label": "Email",
+    "twitter_label": "X / Twitter",
+    "linkedin_label": "LinkedIn",
+    "gofundme_label": "GoFundMe",
+    "message": "Si tienes información relevante sobre ensayos clínicos, contactos médicos, o quieres colaborar de cualquier forma, no dudes en escribir."
+  },
+  "footer": {
+    "disclaimer": "Este sitio es un recurso informativo mantenido por el equipo de apoyo de la paciente. No sustituye asesoramiento médico profesional.",
+    "updated": "Última actualización",
+    "nav_heading": "Navegación",
+    "social_heading": "Social",
+    "made_with": "Hecho con cariño, ciencia y mucha IA.",
+    "site_header": "Encabezado del sitio",
+    "site_footer": "Pie de página"
+  }
+}
