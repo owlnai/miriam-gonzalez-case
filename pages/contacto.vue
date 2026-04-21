@@ -96,9 +96,14 @@
               name="contact"
               method="POST"
               data-netlify="true"
+              data-netlify-honeypot="bot-field"
               class="card-base space-y-5"
             >
               <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="subject" value="Nuevo mensaje de contacto — miriamgonp.com" />
+              <p hidden>
+                <label>No rellenes esto: <input name="bot-field" /></label>
+              </p>
               <div>
                 <label for="name" class="block text-sm font-medium text-ink-800 mb-1.5">
                   {{ locale === 'es' ? 'Nombre' : 'Name' }}
