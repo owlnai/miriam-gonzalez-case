@@ -31,6 +31,36 @@
               </a>
 
               <a
+                href="https://www.instagram.com/miriamgonp"
+                target="_blank"
+                rel="noopener"
+                class="card-base flex items-center gap-4 hover:shadow-md transition-shadow group"
+              >
+                <span class="w-10 h-10 rounded-xl bg-pink-500 flex items-center justify-center shrink-0">
+                  <Icon name="ph:instagram-logo-fill" class="w-5 h-5 text-white" />
+                </span>
+                <div>
+                  <p class="font-semibold text-ink-900 text-sm group-hover:text-ocean-700 transition-colors">Instagram</p>
+                  <p class="text-xs text-ink-600">@miriamgonp</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/miriamgonp"
+                target="_blank"
+                rel="noopener"
+                class="card-base flex items-center gap-4 hover:shadow-md transition-shadow group"
+              >
+                <span class="w-10 h-10 rounded-xl bg-blue-700 flex items-center justify-center shrink-0">
+                  <Icon name="ph:linkedin-logo-fill" class="w-5 h-5 text-white" />
+                </span>
+                <div>
+                  <p class="font-semibold text-ink-900 text-sm group-hover:text-ocean-700 transition-colors">{{ $t('contact.linkedin_label') }}</p>
+                  <p class="text-xs text-ink-600">linkedin.com/in/miriamgonp</p>
+                </div>
+              </a>
+
+              <a
                 href="https://gofund.me/3e25cae99"
                 target="_blank"
                 rel="noopener"

@@ -39,6 +39,12 @@
             <a href="https://x.com/miriamgonp" target="_blank" rel="noopener noreferrer" class="text-sm text-ink-700 hover:text-ink-950 transition-colors">
               X / Twitter
             </a>
+            <a href="https://www.instagram.com/miriamgonp" target="_blank" rel="noopener noreferrer" class="text-sm text-ink-700 hover:text-ink-950 transition-colors">
+              Instagram
+            </a>
+            <a href="https://www.linkedin.com/in/miriamgonp" target="_blank" rel="noopener noreferrer" class="text-sm text-ink-700 hover:text-ink-950 transition-colors">
+              LinkedIn
+            </a>
             <a href="https://gofund.me/3e25cae99" target="_blank" rel="noopener noreferrer" class="text-sm text-ink-700 hover:text-ink-950 transition-colors">
               GoFundMe
             </a>
