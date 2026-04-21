@@ -121,27 +121,6 @@
           </div>
         </section>
 
-        <section class="mb-10">
-          <!-- Clinical trials -->
-          <h2 class="heading-display text-2xl text-ink-950 mb-6">
-            {{ locale === 'es' ? 'Ensayos clínicos bajo consideración' : 'Clinical trials under consideration' }}
-          </h2>
-          <p class="py-1">{{  locale === 'es' ? 'Aquí aparecerán las propuestas de ensayo que encajan más con el perfil de Miriam próximamante.' : "Trials that can help Miriam's case will be available soon." }}</p>
-          <div v-if="false" class="grid sm:grid-cols-2 gap-4 mb-14">
-            <a
-              v-for="trial in trials"
-              :key="trial.id"
-              :href="trial.link"
-              target="_blank"
-              rel="noopener"
-              class="card-base hover:shadow-md transition-shadow group"
-            >
-              <span class="font-mono text-2xs text-ocean-600 font-medium">{{ trial.id }}</span>
-              <h4 class="font-semibold text-ink-900 text-sm mt-1 group-hover:text-ocean-700 transition-colors">{{ trial.name }}</h4>
-              <p class="text-xs text-ink-600 mt-1.5 leading-relaxed">{{ trial.desc }}</p>
-            </a>
-          </div>
-        </section>
 
         <!-- N-of-1 goal -->
         <div class="card-base bg-ink-950 text-white border-0">
@@ -193,14 +172,12 @@ const papers = computed(() =>
     ? [
         { ref: 'Drago 2019', finding: 'Tumores con FGFR1 amplificado: resistentes a CDK4/6i pero sensibles a everolimus', relevance: 'Caso documentado con 71% de reducción tumoral. Everolimus no sería un bonus aleatorio sino posiblemente lo óptimo para este perfil.', link: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6825550/' },
         { ref: 'NCT04483505', finding: 'Triple bloqueo + inhibidor FGFR en HR+/FGFR alterado (ensayo español)', relevance: 'Funcionó en pacientes sin PIK3CA/ESR1 (9.1 vs 1.9 meses). Lo predictivo fue la proteína FGFR1 alta por IHQ, no la amplificación génica → argumento clave para la rebiopsia.', link: 'https://www.nature.com/articles/s41698-025-01106-1' },
-        { ref: 'Cancer Cell 2019', finding: 'La amplificación FGFR1 puede activar PI3K/AKT de forma independiente a mutación PIK3CA', relevance: 'Justificaría inhibidores de AKT incluso sin mutación PIK3CA detectable.', link: null },
-        { ref: 'NCT04529044', finding: 'Ensayo de PRRT con péptidos receptores en cáncer de mama', relevance: 'Relevante si SSTR2 positivo en rebiopsia. Contacto directo del jefe de radio-oncología de la Arrixaca (Murcia).', link: 'https://clinicaltrials.gov/study/NCT04529044' },
+        { ref: 'NCT04529044', finding: 'Ensayo de PRRT con péptidos receptores en cáncer de mama', relevance: 'Relevante si el perfil molecular lo confirma. Hay contacto directo con especialistas que participan en este ensayo.', link: 'https://clinicaltrials.gov/study/NCT04529044' },
       ]
     : [
         { ref: 'Drago 2019', finding: 'FGFR1-amplified tumors: resistant to CDK4/6i but sensitive to everolimus', relevance: 'Documented case with 71% tumor reduction. Everolimus would not be a random bonus but possibly the optimal choice for this profile.', link: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6825550/' },
         { ref: 'NCT04483505', finding: 'Triple blockade + FGFR inhibitor in HR+/FGFR-altered (Spanish trial)', relevance: 'Worked in patients without PIK3CA/ESR1 (9.1 vs 1.9 months). The predictive factor was high FGFR1 protein by IHC, not gene amplification → key argument for re-biopsy.', link: 'https://www.nature.com/articles/s41698-025-01106-1' },
-        { ref: 'Cancer Cell 2019', finding: 'FGFR1 amplification can activate PI3K/AKT independently of PIK3CA mutation', relevance: 'Would justify AKT inhibitors even without detectable PIK3CA mutation.', link: null },
-        { ref: 'NCT04529044', finding: 'PRRT with receptor peptides in breast cancer trial', relevance: 'Relevant if SSTR2 positive on re-biopsy. Direct contact from head of radiation oncology at Arrixaca (Murcia).', link: 'https://clinicaltrials.gov/study/NCT04529044' },
+        { ref: 'NCT04529044', finding: 'PRRT trial with receptor peptides in breast cancer', relevance: 'Relevant if the molecular profile confirms it. There is direct contact with specialists participating in this trial.', link: 'https://clinicaltrials.gov/study/NCT04529044' },
       ]
 )
 
@@ -224,23 +201,5 @@ const panelRows = computed(() =>
       ]
 )
 
-const trials = computed(() =>
-  locale.value === 'es'
-    ? [
-        { id: 'ADELA', name: 'Elacestrant ± everolimus', desc: 'Contacto establecido, cita para biopsia líquida.', link: '#' },
-        { id: 'NCT05563220', name: 'ELEVATE — Plataforma con elacestrant', desc: 'Múltiples brazos por biomarcador.', link: 'https://clinicaltrials.gov/study/NCT05563220' },
-        { id: 'NCT06016738', name: 'OPERA-01 — Palazestrant vs estándar', desc: 'Post-progresión endocrina + CDK4/6.', link: 'https://clinicaltrials.gov/study/NCT06016738' },
-        { id: 'NCT04802759', name: 'MORPHEUS-BREAST — Umbrella', desc: 'Plataforma flexible con brazos variables.', link: 'https://clinicaltrials.gov/study/NCT04802759' },
-        { id: 'NCT04529044', name: 'PRRT en mama', desc: 'Conexión directa desde Murcia.', link: 'https://clinicaltrials.gov/study/NCT04529044' },
-        { id: 'NCT05508906', name: 'Palazestrant + Everolimus (1b)', desc: 'Posible vía compasiva off-label.', link: 'https://clinicaltrials.gov/study/NCT05508906' },
-      ]
-    : [
-        { id: 'ADELA', name: 'Elacestrant ± everolimus', desc: 'Contact established, liquid biopsy appointment set.', link: '#' },
-        { id: 'NCT05563220', name: 'ELEVATE — Elacestrant platform', desc: 'Multiple biomarker-matched arms.', link: 'https://clinicaltrials.gov/study/NCT05563220' },
-        { id: 'NCT06016738', name: 'OPERA-01 — Palazestrant vs standard', desc: 'Post-endocrine + CDK4/6 progression.', link: 'https://clinicaltrials.gov/study/NCT06016738' },
-        { id: 'NCT04802759', name: 'MORPHEUS-BREAST — Umbrella', desc: 'Flexible platform with variable arms.', link: 'https://clinicaltrials.gov/study/NCT04802759' },
-        { id: 'NCT04529044', name: 'PRRT in breast cancer', desc: 'Direct connection from Murcia.', link: 'https://clinicaltrials.gov/study/NCT04529044' },
-        { id: 'NCT05508906', name: 'Palazestrant + Everolimus (1b)', desc: 'Potential compassionate use off-label.', link: 'https://clinicaltrials.gov/study/NCT05508906' },
-      ]
-)
+
 </script>
