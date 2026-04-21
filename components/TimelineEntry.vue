@@ -27,6 +27,12 @@
       <p class="text-sm text-ink-600 leading-relaxed">
         {{ entry.description }}
       </p>
+      <img
+        v-if="entry.image"
+        :src="entry.image"
+        alt=""
+        class="mt-4 rounded-xl w-full max-w-sm object-cover"
+      />
       <a
         v-if="entry.link"
         :href="entry.link"
@@ -50,6 +56,7 @@ defineProps<{
     highlight?: boolean
     link?: string
     linkLabel?: string
+    image?: string
   }
 }>()
 </script>
