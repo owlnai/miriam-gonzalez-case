@@ -23,7 +23,7 @@
   "hero": {
     "tagline": "Una paciente. Un tumor único. Una oportunidad real.",
     "title": "Miriam tiene cáncer de mama metastásico y la medicina estándar no tiene respuestas para su caso.",
-    "subtitle": "Su tumor no responde a ningún tratamiento estándar. Para encontrar el correcto necesita pruebas que la sanidad pública no financia — y el tiempo no puede esperar.",
+    "subtitle": "Su tumor no responde a ningún tratamiento estándar. Para encontrar el correcto necesita pruebas que la sanidad pública no financia. Y el tiempo no puede esperar.",
     "cta_donate": "Apoyar a Miriam",
     "cta_science": "Ver la ciencia",
     "section_label": "Presentación del caso"
@@ -39,7 +39,7 @@
       "Segundas opiniones internacionales"
     ],
     "why_title": "¿Por qué no lo cubre la sanidad pública?",
-    "why_text": "Las guías clínicas actuales clasifican este tumor como \"HR+ estándar\", pero su biología real — con un 80% de diferenciación neuroendocrina y amplificación FGFR1 — exige pruebas de precisión que no están incluidas en el protocolo. Sin estas pruebas, Miriam recibe el mismo tratamiento que una paciente con un tumor completamente distinto.",
+    "why_text": "Las guías clínicas actuales clasifican este tumor como \"HR+ estándar\", pero su biología real (con un 80% de diferenciación neuroendocrina y amplificación FGFR1) exige pruebas de precisión que no están incluidas en el protocolo. Sin estas pruebas, Miriam recibe el mismo tratamiento que una paciente con un tumor completamente distinto.",
     "transparency_title": "Máxima transparencia",
     "transparency_text": "Cada gasto está documentado públicamente. Pedimos presupuestos a centros de referencia internacionales y los compartimos con la comunidad."
   },
