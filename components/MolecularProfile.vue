@@ -57,9 +57,9 @@ const markers = computed(() =>
         { marker: 'Ki67', result: '60%', note: 'Alto índice proliferativo', highlight: false },
         { marker: 'TMB / MSI', result: 'Baja / Baja', note: '---', highlight: false },
         { marker: 'SNVs/INDELs', result: 'Ninguna patogénica', note: 'Sin fusiones detectadas', highlight: false },
-        { marker: 'PIK3CA / ESR1', result: 'No detectados en tejido', note: 'Pendiente biopsia líquida (Guardant360)', highlight: false },
-        { marker: 'HER2', result: 'Negativo (0)', note: 'Tinción tenue <10% → reevaluar ultralow en rebiopsia', highlight: false },
-        { marker: 'RP', result: '5% local vs 100% externa', note: 'Discordante: requiere aclaración', highlight: false },
+        { marker: 'PIK3CA / ESR1', result: 'No detectados en tejido', note: 'Pendiente análisis complementario', highlight: false },
+        { marker: 'HER2', result: 'Negativo (0)', note: 'Tinción negativa', highlight: false },
+        { marker: 'RP', result: 'Positivo', note: 'En evaluación', highlight: false },
       ]
     : [
         { marker: 'FGFR1', result: 'Amplified ×13', note: 'Main driver; CDK4/6i resistance, everolimus sensitivity', highlight: true },
@@ -69,9 +69,9 @@ const markers = computed(() =>
         { marker: 'Ki67', result: '60%', note: 'High proliferative index', highlight: false },
         { marker: 'TMB / MSI', result: 'Low / Low', note: '---', highlight: false },
         { marker: 'SNVs/INDELs', result: 'None pathogenic', note: 'No fusions detected', highlight: false },
-        { marker: 'PIK3CA / ESR1', result: 'Not detected in tissue', note: 'Pending liquid biopsy (Guardant360)', highlight: false },
-        { marker: 'HER2', result: 'Negative (0)', note: 'Faint staining <10% → re-evaluate ultralow on re-biopsy', highlight: false },
-        { marker: 'PR', result: '5% local vs 100% external', note: 'Discordant: requires clarification', highlight: false },
+        { marker: 'PIK3CA / ESR1', result: 'Not detected in tissue', note: 'Pending complementary analysis', highlight: false },
+        { marker: 'HER2', result: 'Negative (0)', note: 'Negative staining', highlight: false },
+        { marker: 'PR', result: 'Positive', note: 'Under evaluation', highlight: false },
       ]
 )
 </script>
