@@ -190,4 +190,19 @@
 
 <script setup lang="ts">
 const { locale } = useI18n()
+
+useSeoMeta({
+  title: () => locale.value === 'es'
+    ? 'Contacto — Miriam González'
+    : 'Contact — Miriam González',
+  description: () => locale.value === 'es'
+    ? '¿Eres oncólogo/a, investigador/a o periodista con interés en el caso? Contacta con el equipo de Miriam González para documentación clínica o colaboración.'
+    : 'Are you an oncologist, researcher, or journalist interested in the case? Contact Miriam González\'s team for clinical documentation or collaboration.',
+  ogTitle: () => locale.value === 'es'
+    ? 'Contacto — Miriam González'
+    : 'Contact — Miriam González',
+  ogType: 'website',
+  twitterCard: 'summary',
+  robots: 'noindex',
+})
 </script>

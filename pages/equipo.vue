@@ -60,6 +60,20 @@
 <script setup lang="ts">
 const { locale } = useI18n()
 
+useSeoMeta({
+  title: () => locale.value === 'es'
+    ? 'El equipo — Miriam González'
+    : 'The Team — Miriam González',
+  description: () => locale.value === 'es'
+    ? 'El equipo internacional que trabaja en el caso de Miriam: oncólogos, especialistas en FGFR1, investigadores de IA médica y colaboradores de 4 países.'
+    : 'The international team working on Miriam\'s case: oncologists, FGFR1 specialists, medical AI researchers, and collaborators from 4 countries.',
+  ogTitle: () => locale.value === 'es'
+    ? 'El equipo — Miriam González'
+    : 'The Team — Miriam González',
+  ogType: 'website',
+  twitterCard: 'summary',
+})
+
 const coreTeam = computed(() =>
   locale.value === 'es'
     ? [

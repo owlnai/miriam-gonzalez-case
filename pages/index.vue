@@ -75,6 +75,30 @@
 const { locale } = useI18n()
 const localePath = useLocalePath()
 
+useSeoMeta({
+  title: () => locale.value === 'es'
+    ? 'Miriam González — Oncología de precisión para un tumor ultra-raro'
+    : 'Miriam González — Precision Oncology for an Ultra-Rare Tumor',
+  description: () => locale.value === 'es'
+    ? 'BC-NED con amplificación FGFR1 ×13. Una paciente con cáncer de mama metastásico que usa IA y una red internacional de expertos para acceder a la oncología de precisión. Apoya la rebiopsia molecular.'
+    : 'BC-NED with FGFR1 ×13 amplification. A metastatic breast cancer patient using AI and an international expert network to access precision oncology. Support the molecular rebiopsy.',
+  ogTitle: () => locale.value === 'es'
+    ? 'Miriam González — Oncología de precisión para un tumor ultra-raro'
+    : 'Miriam González — Precision Oncology for an Ultra-Rare Tumor',
+  ogDescription: () => locale.value === 'es'
+    ? 'BC-NED con amplificación FGFR1 ×13. Apoya la rebiopsia molecular avanzada que puede cambiar su tratamiento.'
+    : 'BC-NED with FGFR1 ×13 amplification. Support the advanced molecular rebiopsy that could change her treatment.',
+  ogType: 'website',
+  ogUrl: () => locale.value === 'es' ? 'https://helpmiriam.com' : 'https://helpmiriam.com/en',
+  twitterCard: 'summary_large_image',
+  twitterTitle: () => locale.value === 'es'
+    ? 'Miriam González — Oncología de precisión para un tumor ultra-raro'
+    : 'Miriam González — Precision Oncology for an Ultra-Rare Tumor',
+  twitterDescription: () => locale.value === 'es'
+    ? 'BC-NED con amplificación FGFR1 ×13. Apoya la rebiopsia molecular avanzada.'
+    : 'BC-NED with FGFR1 ×13 amplification. Support the advanced molecular rebiopsy.',
+})
+
 // Update URLs when articles are published
 const pressOutlets = [
   { name: 'El País', url: '#' },

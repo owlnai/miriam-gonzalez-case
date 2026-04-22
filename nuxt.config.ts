@@ -6,12 +6,19 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxt/icon',
     '@nuxt/content',
+    '@nuxtjs/sitemap',
   ],
+
+  site: {
+    url: 'https://helpmiriam.com',
+    name: 'Help Miriam',
+  },
+
+  sitemap: {},
 
   app: {
     head: {
-      htmlAttrs: { lang: 'es' },
-      title: 'Miriam González — Buscando un tratamiemiento oncológico de precisión',
+      title: 'Miriam González — Buscando un tratamiento oncológico de precisión',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -45,6 +52,7 @@ export default defineNuxtConfig({
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
       fallbackLocale: 'es',
     },
     customRoutes: 'config',

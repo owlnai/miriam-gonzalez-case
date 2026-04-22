@@ -122,10 +122,12 @@ function formatDate(dateStr: string) {
   })
 }
 
-useHead({
+useSeoMeta({
   title: computed(() => article.value ? `${article.value.title} — Miriam González` : 'Miriam González'),
-  meta: [
-    { name: 'description', content: computed(() => article.value?.excerpt ?? '') },
-  ],
+  description: computed(() => article.value?.excerpt ?? ''),
+  ogTitle: computed(() => article.value ? `${article.value.title} — Miriam González` : 'Miriam González'),
+  ogDescription: computed(() => article.value?.excerpt ?? ''),
+  ogType: 'article',
+  twitterCard: 'summary_large_image',
 })
 </script>

@@ -78,6 +78,20 @@
 const { locale } = useI18n()
 const localePath = useLocalePath()
 
+useSeoMeta({
+  title: () => locale.value === 'es'
+    ? 'La historia de Miriam — Miriam González'
+    : 'Miriam\'s Story — Miriam González',
+  description: () => locale.value === 'es'
+    ? 'La historia personal de Miriam González: vida con cáncer de mama metastásico en fase 4, su proceso con los tratamientos y la búsqueda de una solución de precisión.'
+    : 'The personal story of Miriam González: life with stage 4 metastatic breast cancer, her treatment journey, and the search for a precision solution.',
+  ogTitle: () => locale.value === 'es'
+    ? 'La historia de Miriam — Miriam González'
+    : 'Miriam\'s Story — Miriam González',
+  ogType: 'article',
+  twitterCard: 'summary_large_image',
+})
+
 const { data: chapters } = await useAsyncData(
   `historia-index-${locale.value}`,
   async () => {
