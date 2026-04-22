@@ -164,10 +164,16 @@ npm run preview    # previsualizar build estática
 ## Cosas pendientes
 
 - [ ] Sustituir `YOUR_FORM_ID` en contacto por ID real de Formspree
-- [ ] Añadir `og-image.jpg` en `public/`
-- [ ] Texto completo de la amiga en historia
+- [ ] Texto completo de Alba en historia
 - [ ] Migrar timeline a `.md` cuando pase de ~15 entradas
-- [ ] Configurar dominio personalizado
-- [ ] Open Graph meta tags específicos por página (ahora solo hay globales)
+- [ ] ~~Configurar dominio personalizado~~ → **helpmiriam.com**
 - [ ] Considerar añadir un RSS feed para las actualizaciones del timeline
 - [ ] Analytics (Plausible o similar, no Google Analytics — coherencia con el mensaje de privacidad)
+
+### SEO — pendiente (auditoría abril 2026)
+
+- [ ] Crear `og-image.jpg` de 1200×630px y ponerla en `public/` — la meta tag ya está, solo falta el archivo
+- [ ] Agregar favicon (`public/favicon.ico` o `public/favicon.svg`)
+- [ ] Schema JSON-LD: `Person` (Miriam) + `Article` en los slugs de ciencia
+- [ ] Verificar `helpmiriam.com` en Google Search Console y enviar sitemap (`/sitemap.xml`)
+- [ ] Solicitar indexación de páginas clave en Search Console tras el próximo deploy
