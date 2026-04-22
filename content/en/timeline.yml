@@ -46,10 +46,12 @@ entries:
   - date: "July 2024, DIPCAN"
     title: The tumor reveals its molecular identity
     description: >
-      Miriam participates in the DIPCAN study at MD Anderson Madrid, enabling advanced genomic
-      analysis (TSO500) on tumor tissue. The results change the understanding of the case:
-      ~80% neuroendocrine differentiation, FGFR1 ×13 amplification, and other markers in
-      the 11q13 cluster. For the first time, the tumor has a defined molecular profile.
+      Miriam participates in the DIPCAN study, enabling a complete genomic analysis of the
+      tumour (TSO500). The results reveal the key markers: FGFR1 amplified ×13, CCND1 ×20,
+      FGF3/4/19 ×18 (11q13 cluster). The analysis also detects a striking discrepancy in the
+      progesterone receptor (PR): the same tumour sample returns 5% at the local laboratory
+      but 100% at the external reference laboratory — a difference with direct implications
+      for hormonal treatment decisions.
     highlight: true
 
   - date: "January 2025, Second line"
@@ -60,11 +62,12 @@ entries:
     highlight: false
 
   - date: "March 2026, Progression"
-    title: Second line discontinued due to severe toxicity
+    title: Bone progression — abemaciclib discontinued
     description: >
-      Bone progression confirmed on PET-CT with new foci. Abemaciclib is discontinued due
-      to bone progression and hepatic toxicity (DILI G2-3). ECOG 0: Miriam maintains full
-      functional capacity, she works, moves, and lives a normal life despite everything.
+      PET-CT confirms new bone foci. Progression is the main reason for the change in
+      strategy. Abemaciclib is also discontinued due to hepatic toxicity (DILI G2-3),
+      though not severe. The rest of the treatment — Zoladex and zoledronic acid —
+      continues. Active search for a third line begins.
     highlight: false
 
   - date: "April 2026, Week 1"
