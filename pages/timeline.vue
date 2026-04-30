@@ -15,13 +15,9 @@
           />
         </ul>
 
-        <!-- More to come -->
         <div class="mt-12 card-base bg-gold-50/40 border-gold-200/50 max-w-2xl">
           <p class="text-sm text-ink-600 leading-relaxed">
-            {{ locale === 'es'
-              ? 'Esta cronología se actualiza semanalmente. Puedes seguir el día a día en tiempo real en X/Twitter.'
-              : 'This timeline is updated weekly. You can follow the day-to-day in real time on X/Twitter.'
-            }}
+            {{ $t('timeline.notice') }}
           </p>
           <a
             href="https://x.com/miriamgonp"
@@ -30,7 +26,7 @@
             class="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-ocean-600 hover:text-ocean-800 transition-colors"
           >
             <Icon name="ph:x-logo-fill" class="w-4 h-4" />
-            @miriamgonp
+            {{ $t('timeline.follow_twitter') }}
           </a>
         </div>
       </div>

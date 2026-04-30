@@ -8,7 +8,6 @@
         />
 
         <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
-          <!-- Info -->
           <div>
             <p class="text-ink-600 leading-relaxed mb-8">
               {{ $t('contact.message') }}
@@ -26,7 +25,7 @@
                 </span>
                 <div>
                   <p class="font-semibold text-ink-900 text-sm group-hover:text-ocean-700 transition-colors">{{ $t('contact.twitter_label') }}</p>
-                  <p class="text-xs text-ink-600">@miriamgonp</p>
+                  <p class="text-xs text-ink-600">{{ $t('timeline.follow_twitter') }}</p>
                 </div>
               </a>
 
@@ -76,21 +75,16 @@
               </a>
             </div>
 
-            <!-- For professionals -->
             <div class="mt-10 card-base bg-ocean-50/40 border-ocean-200/50">
               <h3 class="font-display font-semibold text-ink-900 text-sm mb-2">
-                {{ locale === 'es' ? 'Para profesionales de la oncología e investigación' : 'For oncology professionals and researchers' }}
+                {{ $t('contact.for_professionals') }}
               </h3>
               <p class="text-xs text-ink-600 leading-relaxed">
-                {{ locale === 'es'
-                  ? 'Si estás interesado/a en el caso desde una perspectiva clínica o de investigación, podemos compartir la documentación clínica completa (resumen clínico v4, panel propuesto, referencias) de forma confidencial.'
-                  : 'If you\'re interested in the case from a clinical or research perspective, we can share the complete clinical documentation (clinical summary v4, proposed panel, references) confidentially.'
-                }}
+                {{ $t('contact.for_professionals_desc') }}
               </p>
             </div>
           </div>
 
-          <!-- Contact form (Netlify Forms) -->
           <div>
             <form
               name="contact"
@@ -106,7 +100,7 @@
               </p>
               <div>
                 <label for="name" class="block text-sm font-medium text-ink-800 mb-1.5">
-                  {{ locale === 'es' ? 'Nombre' : 'Name' }}
+                  {{ $t('contact.name_label') }}
                 </label>
                 <input
                   id="name"
@@ -115,7 +109,7 @@
                   required
                   autocomplete="name"
                   class="w-full px-4 py-2.5 bg-ink-50 border border-ink-200 rounded-xl text-sm text-ink-800 placeholder:text-ink-600 focus:outline-none focus:ring-2 focus:ring-gold-600/50 focus:border-gold-600 transition-all"
-                  :placeholder="locale === 'es' ? 'Tu nombre' : 'Your name'"
+                  :placeholder="$t('contact.name_placeholder')"
                 />
               </div>
 
@@ -136,26 +130,26 @@
 
               <div>
                 <label for="role" class="block text-sm font-medium text-ink-800 mb-1.5">
-                  {{ locale === 'es' ? '¿Cuál es tu perfil?' : 'What\'s your role?' }}
+                  {{ $t('contact.role_label') }}
                 </label>
                 <select
                   id="role"
                   name="role"
                   class="w-full px-4 py-2.5 bg-ink-50 border border-ink-200 rounded-xl text-sm text-ink-800 focus:outline-none focus:ring-2 focus:ring-gold-600/50 focus:border-gold-600 transition-all"
                 >
-                  <option value="" disabled selected>{{ locale === 'es' ? 'Selecciona...' : 'Select...' }}</option>
-                  <option value="oncologist">{{ locale === 'es' ? 'Oncólogo/a' : 'Oncologist' }}</option>
-                  <option value="researcher">{{ locale === 'es' ? 'Investigador/a' : 'Researcher' }}</option>
-                  <option value="journalist">{{ locale === 'es' ? 'Periodista' : 'Journalist' }}</option>
-                  <option value="patient">{{ locale === 'es' ? 'Paciente / Familiar' : 'Patient / Family' }}</option>
-                  <option value="tech">{{ locale === 'es' ? 'Profesional tech' : 'Tech professional' }}</option>
-                  <option value="other">{{ locale === 'es' ? 'Otro' : 'Other' }}</option>
+                  <option value="" disabled selected>{{ $t('contact.role_placeholder') }}</option>
+                  <option value="oncologist">{{ $t('contact.role_oncologist') }}</option>
+                  <option value="researcher">{{ $t('contact.role_researcher') }}</option>
+                  <option value="journalist">{{ $t('contact.role_journalist') }}</option>
+                  <option value="patient">{{ $t('contact.role_patient') }}</option>
+                  <option value="tech">{{ $t('contact.role_tech') }}</option>
+                  <option value="other">{{ $t('contact.role_other') }}</option>
                 </select>
               </div>
 
               <div>
                 <label for="message" class="block text-sm font-medium text-ink-800 mb-1.5">
-                  {{ locale === 'es' ? 'Mensaje' : 'Message' }}
+                  {{ $t('contact.message_label') }}
                 </label>
                 <textarea
                   id="message"
@@ -163,7 +157,7 @@
                   rows="4"
                   required
                   class="w-full px-4 py-2.5 bg-ink-50 border border-ink-200 rounded-xl text-sm text-ink-800 placeholder:text-ink-600 focus:outline-none focus:ring-2 focus:ring-gold-600/50 focus:border-gold-600 transition-all resize-y"
-                  :placeholder="locale === 'es' ? '¿Cómo puedes ayudar o qué información tienes?' : 'How can you help or what information do you have?'"
+                  :placeholder="$t('contact.message_placeholder')"
                 ></textarea>
               </div>
 
@@ -171,14 +165,11 @@
                 type="submit"
                 class="w-full px-6 py-3 bg-ink-900 hover:bg-ink-800 text-white font-semibold rounded-xl transition-colors text-sm"
               >
-                {{ locale === 'es' ? 'Enviar mensaje' : 'Send message' }}
+                {{ $t('contact.submit') }}
               </button>
 
               <p class="text-2xs text-ink-600 text-center">
-                {{ locale === 'es'
-                  ? 'Tus datos solo se usan para responder a tu mensaje. No se comparten con terceros.'
-                  : 'Your data is only used to respond to your message. It is not shared with third parties.'
-                }}
+                {{ $t('contact.privacy_notice') }}
               </p>
             </form>
           </div>

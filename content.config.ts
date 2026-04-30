@@ -15,7 +15,7 @@ const chapterSchema = z.object({
   title: z.string(),
   subtitle: z.string().optional(),
   excerpt: z.string(),
-  translationKey: z.string().optional(),
+  translationKey: z.string(),
 })
 
 const articleSchema = z.object({

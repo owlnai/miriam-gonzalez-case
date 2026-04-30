@@ -55,7 +55,9 @@
   },
   "timeline": {
     "title": "Timeline",
-    "subtitle": "Week by week, every milestone matters"
+    "subtitle": "Week by week, every milestone matters",
+    "notice": "This timeline is updated weekly. You can follow the day-to-day in real time on X/Twitter.",
+    "follow_twitter": "miriamgonp on X"
   },
   "story": {
     "title": "Miriam's story",
@@ -78,5 +80,71 @@
     "made_with": "Made with care, science, and a lot of AI.",
     "site_header": "Site header",
     "site_footer": "Site footer"
+  },
+  "index": {
+    "molecular_profile": "The molecular profile",
+    "see_full_science": "See the full science →",
+    "in_the_press": "In the press",
+    "core_thesis": "Core thesis"
+  },
+  "ciencia": {
+    "treatment_history": "Treatment history",
+    "key_evidence": "Key scientific evidence",
+    "proposed_panel": "Proposed re-biopsy panel",
+    "component": "Component",
+    "method": "Method",
+    "targets": "Targets",
+    "implication": "Implication",
+    "proposed_panel_caption": "Proposed re-biopsy panel: components, methods, targets and clinical implication",
+    "goal_n_of_1": "Goal: N-of-1 Trial",
+    "goal_n_of_1_desc": "A trial where Miriam is the sole unit of analysis, with therapeutic decisions guided by her specific molecular profile rather than \"generic HR+\". The path: re-biopsy with advanced panel → MTB at WIN Consortium international board for a molecularly-directed N-of-1 trial with AI.",
+    "win_consortium_desc": "WIN Consortium (Worldwide Innovative Network in Oncology) is an international network connecting centres of excellence in precision oncology to design personalised diagnostic and therapeutic strategies.",
+    "win_consortium_precedent": "This would set a precedent: precision oncology adapted to each patient, without bureaucracy around the primary tumor.",
+    "detailed_analyses": "Detailed analyses",
+    "view_reference": "View reference",
+    "why_no_fit_guidelines": "Why doesn't this tumor fit the guidelines?",
+    "why_no_fit_guidelines_text": "Formally it is a luminal breast cancer (HR+), but with ~80% neuroendocrine differentiation and an FGFR1 ×13. Guidelines tend to recommend treating it as standard luminal, minimizing the neuroendocrine component. Literature and clinical reasoning suggest this hybrid subtype (BC-NED) has worse prognosis and may require completely different strategies.",
+    "thesis": "The thesis: biology, not the organ of origin, should guide treatment.",
+    "thesis_goal": "Goal: an N-of-1 trial that sets a precedent for precision oncology in ultra-rare subtypes."
+  },
+  "team": {
+    "miriam_team": "Miriam's team",
+    "medical_support_network": "Medical support network",
+    "integrative_support": "Integrative Support",
+    "how_it_formed": "This team wasn't planned. It formed organically when professionals from different fields (technology, medicine, AI, research) saw a case that challenged them and decided to contribute what they knew. There is no formal hierarchy. There is a shared goal: let this tumor's biology guide treatment."
+  },
+  "contact": {
+    "for_professionals": "For oncology professionals and researchers",
+    "for_professionals_desc": "If you're interested in the case from a clinical or research perspective, we can share the complete clinical documentation (clinical summary v4, proposed panel, references) confidentially.",
+    "name_label": "Name",
+    "name_placeholder": "Your name",
+    "role_label": "What's your role?",
+    "role_placeholder": "Select...",
+    "role_oncologist": "Oncologist",
+    "role_researcher": "Researcher",
+    "role_journalist": "Journalist",
+    "role_patient": "Patient / Family",
+    "role_tech": "Tech professional",
+    "role_other": "Other",
+    "message_label": "Message",
+    "message_placeholder": "How can you help or what information do you have?",
+    "submit": "Send message",
+    "privacy_notice": "Your data is only used to respond to your message. It is not shared with third parties."
+  },
+  "historia": {
+    "chapter": "Chapter",
+    "chapters": "Chapters",
+    "back_to_story": "Back to the story",
+    "back_to_chapters": "View all chapters",
+    "fallback_notice": "This chapter is not yet available in English. Showing the Spanish version.",
+    "chapter_not_found": "Chapter not found.",
+    "previous": "Previous",
+    "next": "Next",
+    "chapter_navigation": "Chapter navigation",
+    "pending_notice": "This section is being written by someone close to Miriam. It will tell her story from before the diagnosis: who she is beyond cancer, how she got here, and why what she's doing matters. Coming soon.",
+    "story_teaser_1": "Three years ago, Miriam was working full-time as a software developer and creating content about technology. Within a matter of months, her life took a radical turn.",
+    "story_teaser_2": "It all began with back pain, physiotherapy sessions and GPs who couldn't find a solution. As the pain persisted and the healthcare system offered no answers, she decided to arrange an MRI scan herself. One Thursday in January 2024, she found the test results in her inbox: «probable vertebral metastases». A couple of weeks later, the definitive diagnosis arrived: «Stage IV breast cancer with neuroendocrine differentiation».",
+    "story_teaser_3": "For two years, Miriam has been rebuilding her life piece by piece with treatments that have given her time and peace of mind, but with an end date. In 2026, everything has moved forward at breakneck speed. What if these advances, combined with the specific nature of her cancer, opened doors that previously seemed closed?",
+    "story_teaser_4": "In this story, we want to tell you about Míriam's case, her journey and her daily routine so that you can truly understand what it means to live with stage 4 cancer."
   }
 }

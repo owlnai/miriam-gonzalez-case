@@ -53,9 +53,11 @@
     "title": "El equipo",
     "subtitle": "Un grupo multidisciplinar que se formó de manera espontánea en torno a un objetivo común"
   },
-  "timeline": {
+"timeline": {
     "title": "Cronología",
-    "subtitle": "Semana a semana, cada hito importa"
+    "subtitle": "Semana a semana, cada hito importa",
+    "notice": "Esta cronología se actualiza semanalmente. Puedes seguir el día a día en tiempo real en X/Twitter.",
+    "follow_twitter": "miriamgonp en X"
   },
   "story": {
     "title": "La historia de Miriam",
@@ -78,5 +80,71 @@
     "made_with": "Hecho con cariño, ciencia y mucha IA.",
     "site_header": "Encabezado del sitio",
     "site_footer": "Pie de página"
+  },
+  "index": {
+    "molecular_profile": "El perfil molecular",
+    "see_full_science": "Ver la ciencia completa →",
+    "in_the_press": "En los medios",
+    "core_thesis": "Tesis central"
+  },
+  "ciencia": {
+    "treatment_history": "Historia de tratamientos",
+    "key_evidence": "Evidencia científica clave",
+    "proposed_panel": "Panel propuesto para la rebiopsia",
+    "component": "Componente",
+    "method": "Método",
+    "targets": "Dianas",
+    "implication": "Implicación",
+    "proposed_panel_caption": "Panel de rebiopsia propuesto: componentes, métodos, dianas e implicación clínica",
+    "goal_n_of_1": "Objetivo: Ensayo N-of-1",
+    "goal_n_of_1_desc": "Un ensayo donde Míriam es la única unidad de análisis, con decisiones terapéuticas guiadas por su perfil molecular específico y no por \"HR+ genérico\". La ruta: rebiopsia con panel avanzado → MTB internacional en WIN Consortium para ensayo N-of-1 molecularmente dirigido con IA.",
+    "win_consortium_desc": "WIN Consortium (Worldwide Innovative Network in Oncology) es una red internacional que conecta centros de excelencia en oncología de precisión con el objetivo de diseñar estrategias diagnósticas y terapéuticas personalizadas.",
+    "win_consortium_precedent": "Esto sentaría un precedente: la oncología de precisión adaptada a cada paciente, sin burocracia con el tumor principal.",
+    "detailed_analyses": "Análisis detallados",
+    "view_reference": "Ver referencia",
+    "why_no_fit_guidelines": "¿Por qué este tumor no encaja en las guías?",
+    "why_no_fit_guidelines_text": "Formalmente es un cáncer de mama luminal (HR+), pero con un ~80% de diferenciación neuroendocrina y una amplificación FGFR1 ×13. Las guías recomiendan tratarlo como un luminal estándar, minimizando el componente neuroendocrino. La literatura y el sentido clínico sugieren que este subtipo híbrido (BC-NED) tiene peor pronóstico y puede requerir estrategias completamente diferentes.",
+    "thesis": "La tesis: la biología, no el órgano de origen, debería guiar el tratamiento.",
+    "thesis_goal": "Objetivo: un ensayo N-of-1 que siente precedente para la oncología de precisión en subtipos ultra-raros."
+  },
+  "team": {
+    "miriam_team": "El equipo de Miriam",
+    "medical_support_network": "Red médica de apoyo",
+    "integrative_support": "Apoyo integral",
+    "how_it_formed": "Este equipo no se planificó. Se formó de manera orgánica cuando profesionales de distintos campos (tecnología, medicina, IA, investigación) vieron un caso que les interpeló y decidieron aportar lo que sabían. No hay jerarquía formal. Hay un objetivo compartido: que la biología de este tumor guíe el tratamiento."
+  },
+  "contact": {
+    "for_professionals": "Para profesionales de la oncología e investigación",
+    "for_professionals_desc": "Si estás interesado/a en el caso desde una perspectiva clínica o de investigación, podemos compartir la documentación clínica completa (resumen clínico v4, panel propuesto, referencias) de forma confidencial.",
+    "name_label": "Nombre",
+    "name_placeholder": "Tu nombre",
+    "role_label": "¿Cuál es tu perfil?",
+    "role_placeholder": "Selecciona...",
+    "role_oncologist": "Oncólogo/a",
+    "role_researcher": "Investigador/a",
+    "role_journalist": "Periodista",
+    "role_patient": "Paciente / Familiar",
+    "role_tech": "Profesional tech",
+    "role_other": "Otro",
+    "message_label": "Mensaje",
+    "message_placeholder": "¿Cómo puedes ayudar o qué información tienes?",
+    "submit": "Enviar mensaje",
+    "privacy_notice": "Tus datos solo se usan para responder a tu mensaje. No se comparten con terceros."
+  },
+  "historia": {
+    "chapter": "Capítulo",
+    "chapters": "Capítulos",
+    "back_to_story": "Volver a la historia",
+    "back_to_chapters": "Ver todos los capítulos",
+    "fallback_notice": "Este capítulo aún no está disponible en inglés. Se muestra la versión en español.",
+    "chapter_not_found": "Capítulo no encontrado.",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "chapter_navigation": "Navegación entre capítulos",
+    "pending_notice": "Esta sección está siendo escrita por una persona cercana a Miriam. Contará su historia desde antes del diagnóstico: quién es más allá del cáncer, cómo llegó hasta aquí, y por qué importa lo que está haciendo. Estará disponible pronto.",
+    "story_teaser_1": "Hace tres años, Míriam se dedicaba a tiempo completo a programar y crear contenido sobre tecnología. En cuestión de meses, su vida dio un giro radical.",
+    "story_teaser_2": "Todo empezó con un dolor de espalda, sesiones de fisioterapia y médicos de cabecera que no buscaban una solución. Como el dolor no remitía y el sistema sanitario no le ofrecía respuestas, decidió solicitar por su cuenta una resonancia magnética. Un jueves de enero de 2024, encontró en su bandeja de entrada el resultado de la prueba: «probable metástasis vertebrales». Un par de semanas después, llegó el diagnóstico final: «Carcinoma de mama con diferenciación neuroendocrina en estadio IV».",
+    "story_teaser_3": "Durante dos años, Míriam ha ido reconstruyendo su vida pieza por pieza con tratamientos que le han dado tiempo y calma, pero con fecha de caducidad. En 2026, todo ha avanzado a gran velocidad. ¿Y si esos avances, sumados a las particularidades de su cáncer, abrieran puertas que antes parecían cerradas?",
+    "story_teaser_4": "En esta historia queremos contarte el caso de Míriam, su proceso y su rutina para que conozcas de verdad lo que implica vivir con cáncer en fase 4."
   }
 }

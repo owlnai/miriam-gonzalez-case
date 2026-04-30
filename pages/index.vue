@@ -3,29 +3,27 @@
     <SectionHero />
     <SectionCampaign />
 
-    <!-- Quick science preview -->
-    <section class="section-spacing" :aria-label="locale === 'es' ? 'El perfil molecular' : 'The molecular profile'">
+    <section class="section-spacing" :aria-label="$t('index.molecular_profile')">
       <div class="section-container">
         <div class="flex items-center justify-between mb-8">
           <h2 class="heading-display text-2xl sm:text-3xl text-ink-950">
-            {{ locale === 'es' ? 'El perfil molecular' : 'The molecular profile' }}
+            {{ $t('index.molecular_profile') }}
           </h2>
           <NuxtLink
             :to="localePath({ name: 'ciencia' })"
             class="link-underline text-sm"
           >
-            {{ locale === 'es' ? 'Ver la ciencia completa →' : 'See the full science →' }}
+            {{ $t('index.see_full_science') }}
           </NuxtLink>
         </div>
         <MolecularProfile />
       </div>
     </section>
 
-    <!-- In the press -->
-    <section class="section-spacing bg-white/50" :aria-label="locale === 'es' ? 'En los medios' : 'In the press'">
+    <section class="section-spacing bg-white/50" :aria-label="$t('index.in_the_press')">
       <div class="section-container">
         <h2 class="heading-display text-2xl sm:text-3xl text-ink-950 mb-10 text-center">
-          {{ locale === 'es' ? 'En los medios' : 'In the press' }}
+          {{ $t('index.in_the_press') }}
         </h2>
         <div class="flex flex-wrap justify-center gap-8 sm:gap-12">
           <a
@@ -47,26 +45,18 @@
       </div>
     </section>
 
-    <!-- Thesis callout -->
-    <section class="py-20 bg-ink-950 text-white relative overflow-hidden" :aria-label="locale === 'es' ? 'Tesis central' : 'Core thesis'">
-      <!-- Decorative dots -->
+    <section class="py-20 bg-ink-950 text-white relative overflow-hidden" :aria-label="$t('index.core_thesis')">
       <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 24px 24px;" />
 
       <div class="relative section-container text-center">
         <span class="tag bg-gold-500/20 text-gold-300 border-gold-500/30 mb-6 inline-flex">
-          {{ locale === 'es' ? 'Tesis central' : 'Core thesis' }}
+          {{ $t('index.core_thesis') }}
         </span>
         <blockquote class="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold leading-snug max-w-3xl mx-auto">
-          {{ locale === 'es'
-            ? 'Las guías clínicas clasifican tumores complejos como "HR+ estándar" cuando su biología exige un abordaje de precisión.'
-            : 'Clinical guidelines classify complex tumors as "standard HR+" when their biology demands a precision approach.'
-          }}
+          {{ $t('ciencia.thesis') }}
         </blockquote>
         <p class="mt-6 text-ink-400 max-w-xl mx-auto leading-relaxed">
-          {{ locale === 'es'
-            ? 'Objetivo: un ensayo N-of-1 que siente precedente para la oncología de precisión en subtipos ultra-raros.'
-            : 'Goal: an N-of-1 trial that sets a precedent for precision oncology in ultra-rare subtypes.'
-          }}
+          {{ $t('ciencia.thesis_goal') }}
         </p>
       </div>
     </section>
@@ -74,7 +64,7 @@
 </template>
 
 <script setup lang="ts">
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 const localePath = useLocalePath()
 
 useSeoMeta({
@@ -101,22 +91,6 @@ useSeoMeta({
     : 'BC-NED with FGFR1 ×13 amplification. Support the advanced molecular rebiopsy.',
 })
 
-const pressArticles = {
-  es: [
-    {
-      outlet: 'El País',
-      url: 'https://elpais.com/tecnologia/2026-04-23/asi-usa-una-paciente-con-cancer-metastasico-la-ia-para-entender-su-enfermedad-cual-es-el-mejor-metodo-para-hablar-de-salud-con-chatbots.html',
-      title: 'Así usa una paciente con cáncer metastásico la IA para entender su enfermedad'
-    },
-  ],
-  en: [
-    {
-      outlet: 'El País',
-      url: 'https://english.elpais.com/technology/2026-04-25/whats-the-best-way-to-talk-about-health-with-chatbots.html?outputType=amp',
-      title: "What's the best way to talk about health with chatbots"
-    },
-  ],
-}
-
-const currentArticles = computed(() => pressArticles[locale.value as keyof typeof pressArticles] || [])
+import pressData from '../locales/press.json'
+const currentArticles = computed(() => pressData[locale.value] || pressData.es)
 </script>
