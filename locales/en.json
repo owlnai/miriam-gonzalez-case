@@ -49,10 +49,6 @@
     "title": "The science behind the case",
     "subtitle": "An ultra-rare molecular profile that challenges current clinical guidelines"
   },
-  "team": {
-    "title": "The team",
-    "subtitle": "A multidisciplinary group that formed spontaneously around a common goal"
-  },
   "timeline": {
     "title": "Timeline",
     "subtitle": "Week by week, every milestone matters",
@@ -70,7 +66,23 @@
     "twitter_label": "X / Twitter",
     "linkedin_label": "LinkedIn",
     "gofundme_label": "GoFundMe",
-    "message": "If you have relevant information about clinical trials, medical contacts, or you'd like to collaborate in any way, don't hesitate to reach out."
+    "message": "If you have relevant information about clinical trials, medical contacts, or you'd like to collaborate in any way, don't hesitate to reach out.",
+    "for_professionals": "For oncology professionals and researchers",
+    "for_professionals_desc": "If you're interested in the case from a clinical or research perspective, we can share the complete clinical documentation (clinical summary v4, proposed panel, references) confidentially.",
+    "name_label": "Name",
+    "name_placeholder": "Your name",
+    "role_label": "What's your role?",
+    "role_placeholder": "Select...",
+    "role_oncologist": "Oncologist",
+    "role_researcher": "Researcher",
+    "role_journalist": "Journalist",
+    "role_patient": "Patient / Family",
+    "role_tech": "Tech professional",
+    "role_other": "Other",
+    "message_label": "Message",
+    "message_placeholder": "How can you help or what information do you have?",
+    "submit": "Send message",
+    "privacy_notice": "Your data is only used to respond to your message. It is not shared with third parties."
   },
   "footer": {
     "disclaimer": "This site is an informational resource maintained by the patient's support team. It does not replace professional medical advice.",
@@ -108,28 +120,11 @@
     "thesis_goal": "Goal: an N-of-1 trial that sets a precedent for precision oncology in ultra-rare subtypes."
   },
   "team": {
-    "miriam_team": "Miriam's team",
+    "title": "The team",
+    "subtitle": "A multidisciplinary group that formed spontaneously around a common goal",
     "medical_support_network": "Medical support network",
     "integrative_support": "Integrative Support",
     "how_it_formed": "This team wasn't planned. It formed organically when professionals from different fields (technology, medicine, AI, research) saw a case that challenged them and decided to contribute what they knew. There is no formal hierarchy. There is a shared goal: let this tumor's biology guide treatment."
-  },
-  "contact": {
-    "for_professionals": "For oncology professionals and researchers",
-    "for_professionals_desc": "If you're interested in the case from a clinical or research perspective, we can share the complete clinical documentation (clinical summary v4, proposed panel, references) confidentially.",
-    "name_label": "Name",
-    "name_placeholder": "Your name",
-    "role_label": "What's your role?",
-    "role_placeholder": "Select...",
-    "role_oncologist": "Oncologist",
-    "role_researcher": "Researcher",
-    "role_journalist": "Journalist",
-    "role_patient": "Patient / Family",
-    "role_tech": "Tech professional",
-    "role_other": "Other",
-    "message_label": "Message",
-    "message_placeholder": "How can you help or what information do you have?",
-    "submit": "Send message",
-    "privacy_notice": "Your data is only used to respond to your message. It is not shared with third parties."
   },
   "historia": {
     "chapter": "Chapter",
