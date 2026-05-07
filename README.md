@@ -78,3 +78,4 @@ Cuando el volumen de actualizaciones crezca, migrar los datos a archivos `.md` e
 - [ ] Pensar forma de que el timeline se pueda actualizar solo a partir de publicaciones en redes relevantes o algo similar.
 - [ ] AEO u optimización de búsqueda agéntica
 - [ ] Hablar con Miriam sobre qué imágenes quiere poner
+- [ ] investigar si se puede usar API de Go Fundme en vez de iframe
