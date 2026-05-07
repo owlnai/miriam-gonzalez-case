@@ -16,11 +16,9 @@ La web tiene dos audiencias: científicos/médicos (página de ciencia, perfil m
 ### i18n: español + inglés desde el día 1
 - `@nuxtjs/i18n` con estrategia `prefix_except_default` (español sin prefijo, inglés en `/en/`).
 - Las cadenas de UI viven en `locales/es.json` y `locales/en.json`.
-- Los datos bilingües (timeline, equipo, ciencia) están como `computed()` reactivos dentro de cada página `.vue`, no en los archivos de locale. Esto es intencional: son datos estructurados complejos (arrays de objetos con múltiples campos) que no encajan bien en JSON plano de i18n.
-- **Convención**: si es una cadena de UI corta (botón, título de sección, label), va en locale JSON. Si es un array de objetos con datos (marcadores moleculares, entradas de timeline, miembros del equipo), va como `computed()` en el componente con switch por `locale.value`.
 
 ### Tailwind CSS
-- Paleta custom warm: `ink` (grises cálidos), `gold` (ámbar/dorado como acento), `ocean` (azul profundo para lo científico).
+- Paleta custom warm: `ink` (grises cálidos), `ocean` (azul profundo para lo científico).
 - Tipografía: **Fraunces** (serif, display/titulares), **Source Sans 3** (sans, cuerpo), **JetBrains Mono** (mono, datos científicos).
 - Plugin `@tailwindcss/typography` para prosa en la página de historia.
 - Clases utilitarias custom en `assets/css/main.css`: `.section-container`, `.card-base`, `.tag-gold`, `.tag-ocean`, `.heading-display`, `.link-underline`, `.animate-fade-up`, `.stagger-children`.
@@ -29,7 +27,7 @@ La web tiene dos audiencias: científicos/médicos (página de ciencia, perfil m
 - `@nuxt/icon` con Phosphor Icons (prefijo `ph:`). Ejemplos: `ph:heart-fill`, `ph:flask-fill`, `ph:stethoscope-fill`.
 
 ### Formulario de contacto
-- Formspree (sin backend). El ID del formulario va en `pages/contacto.vue` donde dice `YOUR_FORM_ID`.
+- Netlify Forms integrado (sin backend ni Formspree). El formulario vive en `pages/contacto.vue`.
 
 ### Nuxt Content v3
 - `@nuxt/content` v3 activo. Colecciones definidas en `content.config.ts`.
@@ -37,7 +35,6 @@ La web tiene dos audiencias: científicos/médicos (página de ciencia, perfil m
 - Timeline: archivos `.yml` en `content/es/timeline.yml` y `content/en/timeline.yml`.
 - Historia y ciencia: archivos `.md` en `content/es/historia/`, `content/en/story/`, `content/es/ciencia/`, `content/en/science/`.
 - Los artículos/capítulos se enlazan entre idiomas con `translationKey` en frontmatter.
-- Fallback de traducción: si no existe versión EN, se muestra la ES con aviso. No redirige.
 - Slugs por idioma: ES `/ciencia/analisis-fgfr1`, EN `/en/science/fgfr1-analysis` — rutas custom configuradas en `nuxt.config.ts` bajo `i18n.pages`.
 - Si se modifica `content.config.ts`, correr `npx nuxt prepare` para regenerar tipos.
 
@@ -54,7 +51,7 @@ pages/
   historia/
     index.vue            → Lista de capítulos + placeholder hasta que llegue el texto
     [slug].vue           → Capítulo individual con paginación prev/next
-  contacto.vue           → Formulario Formspree + enlaces + caja para oncólogos
+  contacto.vue           → Formulario Netlify Forms + enlaces + caja para oncólogos
 
 content/
   es/
@@ -83,7 +80,7 @@ components/
 - Los datos moleculares (tabla de biomarcadores, panel de rebiopsia) usan `font-mono` y tags con colores para distinguir visualmente los hallazgos importantes.
 - Las entradas del timeline con `highlight: true` tienen dot dorado; las normales, gris.
 - El equipo se presenta **sin nombres** (solo profesión + país/ciudad). Es intencional: privacidad de los colaboradores.
-- La sección de historia tiene un **placeholder con texto teaser**. Una amiga de Miriam escribirá el contenido final. No eliminar el teaser hasta que llegue el texto real.
+- La sección de historia tiene un **placeholder con texto teaser**. Alba Silvente escribirá el contenido final. No eliminar el teaser hasta que llegue el texto real.
 
 ## Datos clínicos importantes (para no romperlos al editar)
 
@@ -108,16 +105,15 @@ Estos datos son médicamente precisos y no deben modificarse sin verificación:
 ## Cómo añadir contenido
 
 ### Nueva entrada al timeline
-Añadir un objeto al array `timelineEntries` en `pages/timeline.vue`, tanto en la rama `es` como en la `en`:
-```js
-{
-  date: 'Abril 2026 — Semana X',
-  title: 'Título del hito',
-  description: 'Qué pasó.',
-  highlight: true, // o false si es menor
-  link: 'https://...', // opcional
-  linkLabel: 'Ver en X', // opcional
-}
+Añadir un objeto al array `entries` en `content/es/timeline.yml` y `content/en/timeline.yml` (mismo objeto en ambos archivos):
+```yaml
+  - date: 'Abril 2026 — Semana X'
+    title: Título del hito
+    description: >
+      Qué pasó.
+    highlight: true  # o false si es menor
+    link: 'https://...'  # opcional
+    linkLabel: 'Ver en X'  # opcional
 ```
 
 ### Nuevo miembro del equipo
@@ -142,15 +138,15 @@ Añadir al array `trials` en `pages/ciencia.vue`:
 }
 ```
 
-### Texto de la amiga (historia)
+### Texto de Alba (historia)
 Reemplazar el contenido del `<article>` en `pages/historia.vue` con el texto real. Mantener la estructura `prose prose-ink`. Si el texto es largo, considerar migrarlo a `content/es/historia.md` y `content/en/historia.md`.
 
 ## Comandos
 
 ```bash
-npm run dev        # desarrollo local en http://localhost:3000
-npm run generate   # generar sitio estático en .output/public/
-npm run preview    # previsualizar build estática
+pnpm run dev        # desarrollo local en http://localhost:3000
+pnpm run generate   # generar sitio estático en .output/public/
+pnpm run preview    # previsualizar build estática
 ```
 
 ## URLs externas importantes
@@ -163,9 +159,9 @@ npm run preview    # previsualizar build estática
 
 ## Cosas pendientes
 
-- [ ] Sustituir `YOUR_FORM_ID` en contacto por ID real de Formspree
+- [x] ~~Sustituir `YOUR_FORM_ID` en contacto~~ → Migrado a Netlify Forms
 - [ ] Texto completo de Alba en historia
-- [ ] Migrar timeline a `.md` cuando pase de ~15 entradas
+- [x] ~~Migrar timeline a `.md`~~ → Migrado a YAML en `content/es|en/timeline.yml`
 - [ ] ~~Configurar dominio personalizado~~ → **helpmiriam.com**
 - [ ] Considerar añadir un RSS feed para las actualizaciones del timeline
 - [ ] Analytics (Plausible o similar, no Google Analytics — coherencia con el mensaje de privacidad)

@@ -71,9 +71,9 @@ Cuando el volumen de actualizaciones crezca, migrar los datos a archivos `.md` e
 
 ## TODO
 
-- [ ] Sustituir `YOUR_FORM_ID` en `pages/contacto.vue` por el ID real de Formspree
 - [ ] Añadir `og-image.jpg` en `public/`
-- [ ] Texto completo de la amiga en `pages/historia.vue`
-- [ ] Migrar timeline a archivos .md cuando crezca
-- [ ] Configurar dominio personalizado
+- [ ] Texto completo de Alba en `pages/historia.vue`. Se irá creando poco a poco
+- [ ] Configurar dominio en Google Search Console (miriam)
 - [ ] Añadir meta tags de Open Graph específicos por página
+- [ ] Pensar forma de que el timeline se pueda actualizar solo a partir de publicaciones en redes relevantes o algo similar.
+- [ ] AEO u optimización de búsqueda agéntica
