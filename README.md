@@ -1,15 +1,15 @@
-# Miriam González Pérez — Oncología de Precisión
+# Miriam González Pérez — Precision Oncology
 
-Web informativa sobre el caso de Miriam González Pérez: cáncer de mama metastásico con diferenciación neuroendocrina (~80%) y amplificación FGFR1 ×13.
+An informational website about Miriam González Pérez's case: metastatic breast cancer with neuroendocrine differentiation (~80%) and FGFR1 amplification ×13.
 
 ## Stack
 
 - **Nuxt 3** — framework
-- **Nuxt Content v3** — contenido en Markdown (futuro, secciones actualizables)
-- **@nuxtjs/i18n** — internacionalización ES/EN
-- **Tailwind CSS** — estilos
-- **@nuxt/icon** — iconos (Phosphor Icons via Iconify)
-- **Formspree** — formulario de contacto sin backend
+- **Nuxt Content v3** — Markdown content (future: updateable sections)
+- **@nuxtjs/i18n** — internationalization ES/EN
+- **Tailwind CSS** — styles
+- **@nuxt/icon** — icons (Phosphor Icons via Iconify)
+- **Netlify Forms** — contact form (no backend)
 
 ## Setup
 
@@ -18,7 +18,7 @@ npm install
 npm run dev
 ```
 
-Abre `http://localhost:3000`.
+Open `http://localhost:3000`.
 
 ## Deploy
 
@@ -26,56 +26,79 @@ Abre `http://localhost:3000`.
 npm run generate
 ```
 
-Sube la carpeta `.output/public/` a Vercel, Netlify, o Cloudflare Pages.
+Upload the `.output/public/` folder to Vercel, Netlify, or Cloudflare Pages.
 
-Para deploy automático con Vercel:
-1. Conecta el repo de GitHub
+For automatic deployment with Vercel:
+1. Connect the GitHub repo
 2. Framework preset: Nuxt.js
-3. Cada push a `main` redespliega automáticamente
+3. Every push to `main` triggers automatic redeployment
 
-## Estructura
+## Structure
 
 ```
 pages/
-  index.vue         → Landing (hero + GoFundMe + perfil molecular + tesis)
-  ciencia.vue       → Página científica completa
-  equipo.vue        → Equipo (anónimo, por profesión)
-  timeline.vue      → Cronología semana a semana
-  historia.vue      → Historia personal (placeholder para texto de amiga)
-  contacto.vue      → Contacto + formulario Formspree
+  index.vue         → Landing (hero + GoFundMe + molecular profile + thesis)
+  ciencia.vue       → Complete scientific page
+  equipo.vue        → Team (anonymous, by profession)
+  timeline.vue      → Week-by-week timeline
+  historia.vue      → Personal story (placeholder for friend's text)
+  contacto.vue      → Contact + Netlify Forms
 
 components/
-  SiteNav.vue       → Navegación sticky con i18n toggle
+  SiteNav.vue       → Sticky navigation with i18n toggle
   SiteFooter.vue    → Footer
-  SectionHero.vue   → Hero de la landing
-  SectionCampaign.vue → Sección GoFundMe
-  MolecularProfile.vue → Tabla de perfil molecular
-  TimelineEntry.vue → Entrada individual del timeline
-  TeamCard.vue      → Tarjeta de miembro del equipo
-  PageHeader.vue    → Cabecera reutilizable de página
+  SectionHero.vue   → Landing hero
+  SectionCampaign.vue → GoFundMe section
+  MolecularProfile.vue → Molecular profile table
+  TimelineEntry.vue → Individual timeline entry
+  TeamCard.vue      → Team member card
+  PageHeader.vue    → Reusable page header
 
 locales/
-  es.json           → Cadenas en español
-  en.json           → Cadenas en inglés
+  es.json           → Spanish strings
+  en.json           → English strings
 ```
 
-## Cómo actualizar contenido
+## How to Update Content
 
-### Opción actual (datos en componentes)
-Los datos del timeline, equipo y ciencia están directamente en los archivos `.vue` como `computed()`. Para actualizar:
-1. Edita el archivo correspondiente
-2. Commit + push → redeploy automático
+### Current option (data in components)
+Timeline, team, and science data lives directly in `.vue` files as `computed()`. To update:
+1. Edit the corresponding file
+2. Commit + push → automatic redeploy
 
-### Opción futura (Markdown)
-Cuando el volumen de actualizaciones crezca, migrar los datos a archivos `.md` en `content/es/` y `content/en/` usando Nuxt Content. Esto permitiría que personas no técnicas editen contenido directamente desde GitHub.
+### Future option (Markdown)
+When update volume grows, migrate data to `.md` files in `content/es/` and `content/en/` using Nuxt Content. This would allow non-technical people to edit content directly from GitHub.
+
+## How to Collaborate
+
+We welcome contributions! Here's how you can help:
+
+### Open an Issue
+If you have a good idea, feature request, or notice something that could be improved:
+1. Go to the [Issues](https://github.com/ceciCoding/miriam-gonzalez-case/issues) tab
+2. Click **New Issue**
+3. Describe your idea or suggestion
+4. Submit — we'll review it and get back to you
+
+### Pull Requests
+- Fork the repository
+- Create a feature branch: `git checkout -b feature/your-feature-name`
+- Make your changes
+- Submit a pull request
+
+### Code Standards
+- Mobile-first CSS (use Tailwind utilities)
+- BEM naming convention for custom CSS
+- No `any` in TypeScript
+- Accessibility: semantic HTML, proper labels, keyboard navigation
 
 ## TODO
 
-- [ ] Añadir `og-image.jpg` en `public/`
-- [ ] Texto completo de Alba en `pages/historia.vue`. Se irá creando poco a poco
-- [ ] Configurar dominio en Google Search Console (miriam)
-- [ ] Añadir meta tags de Open Graph específicos por página y favicon
-- [ ] Pensar forma de que el timeline se pueda actualizar solo a partir de publicaciones en redes relevantes o algo similar.
-- [ ] AEO u optimización de búsqueda agéntica
-- [ ] Hablar con Miriam sobre qué imágenes quiere poner
-- [ ] investigar si se puede usar API de Go Fundme en vez de iframe
+- [ ] Add `og-image.jpg` to `public/`
+- [ ] Alba's complete text in `pages/historia.vue`. Will be added gradually
+- [ ] Configure domain in Google Search Console
+- [ ] Add page-specific Open Graph meta tags and favicon
+- [ ] Think about a way to auto-update the timeline from social media posts or similar
+- [ ] AEO or agentic search optimization
+- [ ] Talk to Miriam about what images she wants to use
+- [ ] Research if GoFundMe API can be used instead of iframe

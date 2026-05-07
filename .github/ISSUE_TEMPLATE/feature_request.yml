@@ -1,0 +1,43 @@
+name: 💡 Feature Request
+description: Propose a new feature or improvement
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 💡 Feature Request
+
+        Thanks for taking the time to suggest an improvement!
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the feature or improvement you're proposing
+      placeholder: |
+        As a [user type], I would like to [goal] so that [benefit].
+        - What problem does this solve?
+        - Who would benefit from this?
+        - How should it work?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Any alternative approaches you've considered?
+      placeholder: Describe any other solutions you considered
+
+  - type: checkboxes
+    id: requirements
+    attributes:
+      label: Requirements
+      options:
+        - label: "Accessibility: This feature should be WCAG 2.2 AA compliant"
+          required: true
+        - label: "Mobile-first: This feature should work well on mobile"
+          required: true
+        - label: "Internationalization: This feature supports both ES and EN"
+          required: true
