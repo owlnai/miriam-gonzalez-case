@@ -4,7 +4,7 @@ An informational website about Miriam González Pérez's case: metastatic breast
 
 ## Stack
 
-- **Nuxt 3** — framework
+- **Nuxt 4** — framework
 - **Nuxt Content v3** — Markdown content (future: updateable sections)
 - **@nuxtjs/i18n** — internationalization ES/EN
 - **Tailwind CSS** — styles
