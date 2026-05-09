@@ -5,8 +5,11 @@ An informational website about Miriam González Pérez's case: metastatic breast
 ## Stack
 
 - **Nuxt 4** — framework
-- **Nuxt Content v3** — Markdown content (future: updateable sections)
+- **Nuxt Content v3** — Markdown/YAML content collections
 - **@nuxtjs/i18n** — internationalization ES/EN
+- **@nuxtjs/seo** — SEO meta, OG images, robots, sitemap, schema.org
+- **@nuxtjs/sitemap** — XML sitemap with i18n hreflang
+- **nuxt-ai-ready** — AI/LLM readiness (`/llms.txt`)
 - **Tailwind CSS** — styles
 - **@nuxt/icon** — icons (Phosphor Icons via Iconify)
 - **Netlify Forms** — contact form (no backend)
@@ -14,8 +17,8 @@ An informational website about Miriam González Pérez's case: metastatic breast
 ## Setup
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Open `http://localhost:3000`.
@@ -23,7 +26,7 @@ Open `http://localhost:3000`.
 ## Deploy
 
 ```bash
-npm run generate
+pnpm generate
 ```
 
 Upload the `.output/public/` folder to Vercel, Netlify, or Cloudflare Pages.
@@ -36,38 +39,42 @@ For automatic deployment with Vercel:
 ## Structure
 
 ```
-pages/
-  index.vue         → Landing (hero + GoFundMe + molecular profile + thesis)
-  ciencia.vue       → Complete scientific page
-  equipo.vue        → Team (anonymous, by profession)
-  timeline.vue      → Week-by-week timeline
-  historia.vue      → Personal story (placeholder for friend's text)
-  contacto.vue      → Contact + Netlify Forms
+app/
+  pages/
+    index.vue              → Landing (hero + GoFundMe + molecular profile + thesis)
+    ciencia/
+      index.vue            → Complete scientific page + article list
+      [slug].vue           → Individual science article
+    historia/
+      index.vue            → Chapter list
+      [slug].vue           → Individual chapter with prev/next
+    equipo.vue             → Team (anonymous, by profession)
+    timeline.vue           → Week-by-week timeline
+    contacto.vue           → Contact + Netlify Forms
+  components/
+    OgImage/
+      Default.takumi.vue   → OG image template (nuxt-og-image)
+    SiteNav.vue            → Sticky navigation with i18n toggle
+    SiteFooter.vue         → Footer
+    SectionHero.vue        → Landing hero
+    SectionCampaign.vue    → GoFundMe section
+    MolecularProfile.vue   → Molecular profile table
+    TimelineEntry.vue      → Individual timeline entry
+    TeamCard.vue           → Team member card
+    PageHeader.vue         → Reusable page header
 
-components/
-  SiteNav.vue       → Sticky navigation with i18n toggle
-  SiteFooter.vue    → Footer
-  SectionHero.vue   → Landing hero
-  SectionCampaign.vue → GoFundMe section
-  MolecularProfile.vue → Molecular profile table
-  TimelineEntry.vue → Individual timeline entry
-  TeamCard.vue      → Team member card
-  PageHeader.vue    → Reusable page header
+content/
+  es/  →  timeline.yml, team.yml, press.yml, science.yml, historia/*.md, ciencia/*.md
+  en/  →  timeline.yml, team.yml, press.yml, science.yml, story/*.md, science/*.md
 
-locales/
+i18n/locales/
   es.json           → Spanish strings
   en.json           → English strings
 ```
 
 ## How to Update Content
 
-### Current option (data in components)
-Timeline, team, and science data lives directly in `.vue` files as `computed()`. To update:
-1. Edit the corresponding file
-2. Commit + push → automatic redeploy
-
-### Future option (Markdown)
-When update volume grows, migrate data to `.md` files in `content/es/` and `content/en/` using Nuxt Content. This would allow non-technical people to edit content directly from GitHub.
+All content lives in `content/es/` and `content/en/`. Edit the YAML or Markdown files and push to `main` — the site regenerates automatically. See `CONTENT-REPO.md` for full details.
 
 ## How to Collaborate
 
@@ -94,11 +101,13 @@ If you have a good idea, feature request, or notice something that could be impr
 
 ## TODO
 
-- [ ] Add `og-image.jpg` to `public/`
-- [ ] Alba's complete text in `pages/historia.vue`. Will be added gradually
-- [ ] Configure domain in Google Search Console
-- [ ] Add page-specific Open Graph meta tags and favicon
-- [ ] Think about a way to auto-update the timeline from social media posts or similar
-- [ ] AEO or agentic search optimization
+- [x] ~~Add page-specific Open Graph meta tags~~ → `useSeoMeta` on all pages + OG image component
+- [x] ~~robots.txt~~ → managed by `nuxt-robots` (`public/_robots.txt`)
+- [x] ~~Sitemap~~ → `@nuxtjs/sitemap` with i18n hreflang auto-generated
+- [x] ~~AEO / agentic search~~ → `nuxt-ai-ready` serves `/llms.txt`
+- [ ] Alba's complete text in `app/pages/historia/index.vue` — will be added gradually
+- [ ] Add favicon (`public/favicon.ico` or `public/favicon.svg`)
+- [ ] Verify `helpmiriam.com` in Google Search Console and request indexing
+- [ ] Think about a way to auto-update the timeline from social media posts
 - [ ] Talk to Miriam about what images she wants to use
 - [ ] Research if GoFundMe API can be used instead of iframe

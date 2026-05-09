@@ -1,13 +1,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-04-01',
 
-  modules: [
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/i18n',
-    '@nuxt/icon',
-    '@nuxt/content',
-    '@nuxtjs/sitemap',
-  ],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n', '@nuxt/icon', '@nuxtjs/seo', '@nuxtjs/sitemap', '@nuxt/content', 'nuxt-ai-ready'],
 
   site: {
     url: 'https://helpmiriam.com',
@@ -19,15 +13,6 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'Miriam González — Buscando un tratamiento oncológico de precisión',
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        {
-          name: 'description',
-          content: 'Cáncer de mama con diferenciación neuroendocrina y amplificación FGFR1. Una paciente que lucha por la oncología de precisión con IA y una red internacional de expertos.',
-        },
-        { property: 'og:image', content: '/og-image.jpg' },
-      ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },

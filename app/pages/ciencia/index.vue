@@ -163,14 +163,14 @@ const localePath = useLocalePath()
 
 useSeoMeta({
   title: () => locale.value === 'es'
-    ? 'Perfil Molecular BC-NED + FGFR1 ×13 — Ciencia | Miriam González'
-    : 'Molecular Profile BC-NED + FGFR1 ×13 — Science | Miriam González',
+    ? 'Perfil Molecular BC-NED + FGFR1 ×13 — Ciencia'
+    : 'Molecular Profile BC-NED + FGFR1 ×13 — Science',
   description: () => locale.value === 'es'
     ? 'Análisis científico completo del caso: cáncer de mama con ~80% diferenciación neuroendocrina, amplificación FGFR1 ×13, CCND1 ×20. Historia de tratamientos, rebiopsia propuesta y ensayos clínicos relevantes.'
     : 'Full scientific analysis: breast cancer with ~80% neuroendocrine differentiation, FGFR1 ×13 amplification, CCND1 ×20. Treatment history, proposed rebiopsy, and relevant clinical trials.',
   ogTitle: () => locale.value === 'es'
-    ? 'Perfil Molecular BC-NED + FGFR1 ×13 | Miriam González'
-    : 'Molecular Profile BC-NED + FGFR1 ×13 | Miriam González',
+    ? 'Perfil Molecular BC-NED + FGFR1 ×13'
+    : 'Molecular Profile BC-NED + FGFR1 ×13',
   ogDescription: () => locale.value === 'es'
     ? 'Análisis científico del caso: BC-NED, FGFR1 ×13, CCND1 ×20. Metástasis óseas, ECOG 0, sin crisis visceral. Rebiopsia molecular avanzada como siguiente paso.'
     : 'Scientific case analysis: BC-NED, FGFR1 ×13, CCND1 ×20. Bone metastases, ECOG 0, no visceral crisis. Advanced molecular rebiopsy as the next step.',
