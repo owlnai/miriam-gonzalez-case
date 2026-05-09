@@ -68,7 +68,8 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts">defineOgImage('BlogPostTakumi')
+
 import type { Collections, PressEnCollectionItem } from '@nuxt/content'
 const { locale } = useI18n()
 const localePath = useLocalePath()
@@ -77,6 +78,12 @@ const { data: pressData } = await useAsyncData(`press-data-${locale.value}`, () 
   const collection = `press_${locale.value || 'en'}` as keyof Collections
   return queryCollection(collection).first() as Promise<PressEnCollectionItem | null>
 }, { watch: [locale] })
+
+defineOgImage('Default.takumi', {
+  title: locale.value === 'es' ? 'Oncología de precisión para un tumor ultra-raro' : 'Precision Oncology for an Ultra-Rare Tumor',
+  description: locale.value === 'es' ? 'BC-NED con amplificación FGFR1 ×13. Apoya la rebiopsia molecular avanzada que puede cambiar su tratamiento.' : 'BC-NED with FGFR1 ×13 amplification. Support the advanced molecular rebiopsy that could change her treatment.',
+  colorMode: 'light'
+})
 
 useSeoMeta({
   title: () => locale.value === 'es'

@@ -14,6 +14,16 @@ The website has two audiences: scientists/physicians (science page, molecular pr
 - We chose SSG over SSR because content changes infrequently (weekly updates) and we want free serverless hosting.
 - Nuxt 4 uses an `app/` directory for all source files (pages, components, assets, layouts).
 
+### SEO: @nuxtjs/seo + @nuxtjs/sitemap + nuxt-ai-ready
+- `@nuxtjs/seo` is a meta-module bundling: nuxt-og-image, nuxt-robots, nuxt-schema-org, nuxt-link-checker, nuxt-seo-utils.
+- `@nuxtjs/sitemap` generates `/sitemap.xml` with i18n hreflang support — integrates automatically with `@nuxtjs/i18n`.
+- `nuxt-ai-ready` generates `/llms.txt` for AI/LLM agent discoverability.
+- **Module order matters**: `@nuxtjs/seo` and `@nuxtjs/sitemap` must be listed BEFORE `@nuxt/content` in `nuxt.config.ts`.
+- `robots.txt` is managed by `nuxt-robots` — do not put a `robots.txt` in `public/`. The source file is `public/_robots.txt`.
+- All pages use `useSeoMeta()` for meta tags. Do not use `useHead()` for SEO-related tags.
+- OG images use `nuxt-og-image` via `defineOgImage()`. The template is `app/components/OgImage/Default.takumi.vue`.
+- `site.url` and `site.name` in `nuxt.config.ts` feed all SEO modules — Nuxt SEO appends `site.name` to page titles automatically, so page titles should not include " | Miriam González" or " — Miriam González" suffixes.
+
 ### i18n: Spanish + English from Day 1
 - `@nuxtjs/i18n` with `prefix_except_default` strategy (Spanish without prefix, English at `/en/`).
 - UI strings live in `i18n/locales/es.json` and `i18n/locales/en.json`.
@@ -40,7 +50,9 @@ The website has two audiences: scientists/physicians (science page, molecular pr
 - Science page data (treatments, papers, panel): `content/es/science.yml` and `content/en/science.yml`.
 - Articles/chapters are linked between languages with `translationKey` in frontmatter.
 - Language-specific slugs: ES `/ciencia/analisis-fgfr1`, EN `/en/science/fgfr1-analysis` — custom routes configured in `nuxt.config.ts` under `i18n.pages`.
-- If you modify `content.config.ts`, run `npx nuxt prepare` to regenerate types.
+- **Page collections** (`historia_es`, `historia_en`, `ciencia_articles`, `science_articles`) have their schemas extended with `defineRobotsSchema()` and `defineSitemapSchema()`. This enables per-file SEO control via frontmatter (e.g. `robots: noindex`, `sitemap: { priority: 0.8 }`).
+- **Data collections** (timeline, team, press, science YML) do NOT have SEO schemas — they are not routed pages.
+- If you modify `content.config.ts`, run `pnpm nuxt prepare` to regenerate types.
 
 ## Project Structure
 
@@ -214,10 +226,12 @@ Have a good idea or noticed something that could be improved?
 - [ ] Consider adding an RSS feed for timeline updates
 - [ ] Analytics (Plausible or similar, not Google Analytics — consistency with privacy message)
 
-### SEO — pending (audit April 2026)
+### SEO
 
-- [ ] Create `og-image.jpg` at 1200×630px and put it in `public/` — the meta tag is already there, just missing the file
+- [x] ~~OG image~~ → `nuxt-og-image` with `app/components/OgImage/Default.takumi.vue`; `defineOgImage()` called on index page
+- [x] ~~robots.txt~~ → `nuxt-robots` manages it from `public/_robots.txt`
+- [x] ~~Sitemap~~ → `@nuxtjs/sitemap` auto-generates with i18n hreflang at `/sitemap.xml`
+- [x] ~~AEO~~ → `nuxt-ai-ready` serves `/llms.txt`
 - [ ] Add favicon (`public/favicon.ico` or `public/favicon.svg`)
-- [ ] Schema JSON-LD: `Person` (Miriam) + `Article` on science slugs
-- [ ] Verify `helpmiriam.com` in Google Search Console and submit sitemap (`/sitemap.xml`)
-- [ ] Request indexing of key pages in Search Console after next deploy
+- [ ] Schema JSON-LD: `Person` (Miriam) + `Article` on science slugs — can use `nuxt-schema-org` (already bundled in `@nuxtjs/seo`)
+- [ ] Verify `helpmiriam.com` in Google Search Console and request indexing of key pages

@@ -1,4 +1,6 @@
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
+import { defineRobotsSchema } from '@nuxtjs/robots/content'
+import { defineSitemapSchema } from '@nuxtjs/sitemap/content'
 
 const timelineEntrySchema = z.object({
   date: z.string(),
@@ -94,22 +96,34 @@ export default defineContentConfig({
     historia_es: defineCollection({
       type: 'page',
       source: 'es/historia/*.md',
-      schema: chapterSchema,
+      schema: chapterSchema.extend({
+        robots: defineRobotsSchema(),
+        sitemap: defineSitemapSchema(),
+      }),
     }),
     historia_en: defineCollection({
       type: 'page',
       source: 'en/story/*.md',
-      schema: chapterSchema,
+      schema: chapterSchema.extend({
+        robots: defineRobotsSchema(),
+        sitemap: defineSitemapSchema(),
+      }),
     }),
     ciencia_articles: defineCollection({
       type: 'page',
       source: 'es/ciencia/*.md',
-      schema: articleSchema,
+      schema: articleSchema.extend({
+        robots: defineRobotsSchema(),
+        sitemap: defineSitemapSchema(),
+      }),
     }),
     science_articles: defineCollection({
       type: 'page',
       source: 'en/science/*.md',
-      schema: articleSchema,
+      schema: articleSchema.extend({
+        robots: defineRobotsSchema(),
+        sitemap: defineSitemapSchema(),
+      }),
     }),
     team_es: defineCollection({
       type: 'data',

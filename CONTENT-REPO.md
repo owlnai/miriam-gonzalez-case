@@ -150,6 +150,8 @@ formato estándar de Markdown.
 | `subtitle`       | ❌ | Subtítulo opcional |
 | `excerpt`        | ✅ | Resumen de 1-2 frases. Aparece en el índice y en redes sociales |
 | `translationKey` | ❌ | Clave compartida con la versión EN para enlazar traducciones |
+| `robots`         | ❌ | Control de indexación. Ejemplo: `noindex` para capítulos en borrador |
+| `sitemap`        | ❌ | Control del sitemap. Ejemplo: `{ priority: 0.8, lastmod: 2026-05-01 }` |
 
 ### Versión en inglés (`content/en/story/`)
 
@@ -209,6 +211,8 @@ La amplificación FGFR1 ×13 en este caso no es una alteración secundaria...
 | `excerpt`        | ✅ | Resumen de 2-3 frases. Aparece en el índice |
 | `translationKey` | ❌ | Clave compartida con la versión EN para enlazar traducciones |
 | `references`     | ❌ | Referencias con `id` (cómo aparece en el texto) y `link` |
+| `robots`         | ❌ | Control de indexación. Ejemplo: `noindex` para artículos en borrador |
+| `sitemap`        | ❌ | Control del sitemap. Ejemplo: `{ priority: 0.9, lastmod: 2026-05-01 }` |
 
 ### Versión en inglés (`content/en/science/`)
 
@@ -311,6 +315,25 @@ debe consultarse con el equipo médico antes de cambiar:
 | Ki67 inicial | **60%** |
 | HER2 | **negativo (0)** |
 | ECOG actual | **0** (abril 2026) |
+
+---
+
+## SEO por artículo o capítulo
+
+Los archivos `.md` de `historia/` y `ciencia/` aceptan campos SEO en el frontmatter:
+
+```markdown
+---
+title: Mi capítulo
+robots: noindex        # evita indexación (útil para borradores)
+sitemap:
+  priority: 0.8        # prioridad en el sitemap (0.0–1.0)
+  lastmod: 2026-05-01  # fecha de última modificación
+---
+```
+
+El `robots.txt` general lo gestiona automáticamente el módulo `nuxt-robots`.
+No editar ni crear `public/robots.txt` — el archivo fuente es `public/_robots.txt`.
 
 ---
 

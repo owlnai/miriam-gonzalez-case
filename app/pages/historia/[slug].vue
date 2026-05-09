@@ -142,10 +142,12 @@ const prevChapter = computed(() => data.value?.prevChapter)
 const nextChapter = computed(() => data.value?.nextChapter)
 const isFallback = computed(() => data.value?.isFallback ?? false)
 
-useHead({
-  title: computed(() => chapter.value ? `${chapter.value.title} — Miriam González` : 'Miriam González'),
-  meta: [
-    { name: 'description', content: computed(() => chapter.value?.excerpt ?? '') },
-  ],
+useSeoMeta({
+  title: () => chapter.value ? `${chapter.value.title} — Miriam González` : 'Miriam González',
+  description: () => chapter.value?.excerpt ?? '',
+  ogTitle: () => chapter.value ? `${chapter.value.title} — Miriam González` : 'Miriam González',
+  ogDescription: () => chapter.value?.excerpt ?? '',
+  ogType: 'article',
+  twitterCard: 'summary_large_image',
 })
 </script>
