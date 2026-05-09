@@ -43,7 +43,10 @@
     "why_title": "¿Por qué no lo cubre la sanidad pública?",
     "why_text": "Las guías clínicas actuales clasifican este tumor como \"HR+ estándar\", pero su biología real — con un 80% de diferenciación neuroendocrina y amplificación FGFR1 ×13 — necesita pruebas de precisión que no están incluidas en el protocolo. Sin ellas, el tratamiento es insuficiente para lo que realmente tiene Miriam.",
     "transparency_title": "Máxima transparencia",
-    "transparency_text": "Cada gasto está documentado públicamente. Pedimos presupuestos a centros de referencia internacionales y los compartimos con la comunidad."
+    "transparency_text": "Cada gasto está documentado públicamente. Pedimos presupuestos a centros de referencia internacionales y los compartimos con la comunidad.",
+    "raised": "Recaudados",
+    "donators": "donantes",
+    "donate_now": "Donar ahora"
   },
   "science": {
     "title": "La ciencia detrás del caso",

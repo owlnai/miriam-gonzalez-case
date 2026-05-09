@@ -56,26 +56,27 @@
           <p class="text-sm text-ink-700 leading-relaxed max-w-2xl">
             {{ $t('gofundme.transparency_text') }}
           </p>
-          <!-- GoFundMe live widget -->
-          <div class="mt-5 mb-4">
-            <iframe
-              src="https://www.gofundme.com/f/biopsia-molecular-que-puede-cambiar-su-tratamiento/widget/medium"
-              width="100%"
-              height="214"
-              frameborder="0"
-              scrolling="no"
-              title="GoFundMe progress"
-            />
+          <GoFundMeProgress />
+          <div class="mt-4 flex items-center gap-3">
+            <a
+              href="https://gofund.me/60665ab35"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 px-5 py-2.5 bg-gold-500 hover:bg-gold-600 text-white text-sm font-semibold rounded-xl transition-colors"
+            >
+              <Icon name="ph:heart-fill" class="size-3.5" aria-hidden="true" />
+              {{ $t('gofundme.donate_now') }}
+            </a>
+            <a
+              href="https://gofund.me/3e25cae99"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 px-5 py-2.5 text-gold-600 border border-ink-200 hover:border-ink-300 text-sm font-semibold rounded-xl transition-colors"
+            >
+              <Icon name="ph:arrow-up-right-bold" class="size-3.5" aria-hidden="true" />
+              GoFundMe
+            </a>
           </div>
-          <a
-            href="https://gofund.me/3e25cae99"
-            target="_blank"
-            rel="noopener"
-            class="inline-flex items-center gap-2 px-5 py-2.5 bg-gold-500 hover:bg-gold-600 text-white text-sm font-semibold rounded-xl transition-colors"
-          >
-            <Icon name="ph:arrow-up-right-bold" class="w-3.5 h-3.5" aria-hidden="true" />
-            GoFundMe
-          </a>
         </div>
       </div>
     </div>

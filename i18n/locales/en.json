@@ -43,7 +43,10 @@
     "why_title": "Why isn't this covered by public healthcare?",
     "why_text": "Current clinical guidelines classify this tumour as \"standard HR+\", but its real biology — with 80% neuroendocrine differentiation and FGFR1 ×13 amplification — needs precision tests that are not included in the protocol. Without them, the treatment is insufficient for what Miriam actually has.",
     "transparency_title": "Full transparency",
-    "transparency_text": "Every expense is publicly documented. We request quotes from international reference centers and share them with the community."
+    "transparency_text": "Every expense is publicly documented. We request quotes from international reference centers and share them with the community.",
+    "raised": "Raised",
+    "donators": "donators",
+    "donate_now": "Donate now"
   },
   "science": {
     "title": "The science behind the case",
