@@ -123,7 +123,7 @@ export default defineContentConfig({
     }),
     press_es: defineCollection({
       type: 'data',
-      source: 'es/presss.yml',
+      source: 'es/press.yml',
       schema: pressSchema,
     }),
     press_en: defineCollection({

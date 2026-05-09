@@ -11,18 +11,23 @@ No hace falta tocar código. Solo archivos Markdown o YAML.
 content/
   es/
     timeline.yml          → cronología completa en español
+    team.yml              → equipo (3 grupos: coreTeam, medicalNetwork, integrativeSupport)
+    press.yml             → menciones en prensa en español
+    science.yml           → datos de la página de ciencia: tratamientos, papers, panel
     historia/
-      01-antes-del-diagnostico.md   → capítulo 1 → genera /historia/01-...
-      02-cuando-llego-el-cancer.md  → capítulo 2 → genera /historia/02-...
+      01-el-comienzo.md   → capítulo 1 → genera /historia/01-...
     ciencia/
-      analisis-fgfr1.md             → artículo → genera /ciencia/analisis-fgfr1
+      analisis-fgfr1.md   → artículo → genera /ciencia/analisis-fgfr1
 
   en/
     timeline.yml          → cronología completa en inglés
+    team.yml              → equipo en inglés
+    press.yml             → menciones en prensa en inglés
+    science.yml           → datos de la página de ciencia en inglés
     story/
-      01-before-the-diagnosis.md    → genera /en/story/01-...
+      01-the-beginning.md → genera /en/story/01-...
     science/
-      fgfr1-analysis.md             → genera /en/science/fgfr1-analysis
+      fgfr1-analysis.md   → genera /en/science/fgfr1-analysis
 ```
 
 > No es obligatorio tener todos los archivos en los dos idiomas.
@@ -90,7 +95,7 @@ Copiar este bloque al final de la lista (respetando la indentación de 2 espacio
   - date: ""
     title: ""
     description: >
-      
+
     highlight: false
 ```
 
@@ -106,7 +111,7 @@ la web genera automáticamente una nueva página con navegación prev/next.
 Usar número de orden + slug descriptivo:
 
 ```
-01-antes-del-diagnostico.md
+01-el-comienzo.md
 02-cuando-llego-el-cancer.md
 03-el-equipo.md
 ```
@@ -149,8 +154,8 @@ formato estándar de Markdown.
 ### Versión en inglés (`content/en/story/`)
 
 El archivo en inglés usa el mismo número de orden pero slug en inglés:
-- ES: `content/es/historia/01-antes-del-diagnostico.md`
-- EN: `content/en/story/01-before-the-diagnosis.md`
+- ES: `content/es/historia/01-el-comienzo.md`
+- EN: `content/en/story/01-the-beginning.md`
 
 Ambos deben tener el mismo `translationKey` en el frontmatter.
 
@@ -211,6 +216,84 @@ La amplificación FGFR1 ×13 en este caso no es una alteración secundaria...
 - EN: `content/en/science/fgfr1-analysis.md` → URL: `/en/science/fgfr1-analysis`
 
 Ambos deben tener el mismo `translationKey`.
+
+---
+
+## 4. Equipo (`content/es/team.yml` / `content/en/team.yml`)
+
+El equipo se gestiona en archivos YAML, uno por idioma. Hay tres grupos:
+- `coreTeam` — equipo principal
+- `medicalNetwork` — red médica
+- `integrativeSupport` — apoyo integrador (oncología metabólica, ejercicio, nutrición, psicología...)
+
+### Añadir un miembro
+
+Añadir un objeto al grupo correspondiente en `content/es/team.yml` (y su traducción en `content/en/team.yml`):
+
+```yaml
+- role: Título profesional (Ciudad/País)
+  description: Lo que aporta al caso.
+  icon: ph:icon-name-fill
+  color: gold  # o ocean o ink
+```
+
+### Colores disponibles
+
+| Color   | Uso |
+|---------|-----|
+| `gold`  | Roles clave o con alta visibilidad |
+| `ocean` | Perfiles técnicos o científicos |
+| `ink`   | Roles de apoyo o contexto |
+
+---
+
+## 5. Prensa (`content/es/press.yml` / `content/en/press.yml`)
+
+### Añadir una mención
+
+```yaml
+articles:
+  - outlet: Nombre del medio
+    url: https://...
+    title: Titular del artículo
+```
+
+---
+
+## 6. Datos de ciencia (`content/es/science.yml` / `content/en/science.yml`)
+
+Este archivo contiene los datos estructurados que alimentan la página de ciencia:
+tratamientos recibidos, papers de referencia, y filas del panel de rebiopsia.
+
+### Sección `treatments`
+
+```yaml
+treatments:
+  - line: 1L
+    regimen: Letrozol + Ribociclib + Zoladex + ác. zoledrónico
+    outcome: Descripción del resultado.
+    active: false  # true si es la línea actual
+```
+
+### Sección `papers`
+
+```yaml
+papers:
+  - ref: 'Autor et al., año — Revista'
+    finding: Qué se encontró
+    relevance: Por qué es relevante para el caso de Míriam
+    link: 'https://doi.org/...'  # null si no hay enlace
+```
+
+### Sección `panelRows`
+
+```yaml
+panelRows:
+  - component: NGS amplio (tejido)
+    method: Panel ≥500 genes
+    targets: 'ESR1, PIK3CA, FGFR1-4, CCND1'
+    implication: Selección de terapia/ensayo por biomarcador
+```
 
 ---
 
