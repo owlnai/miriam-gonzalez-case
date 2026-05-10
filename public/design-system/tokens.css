@@ -1,0 +1,152 @@
+/* Caso Miriam — Design Tokens
+   Solo estos 5 colores. Disciplina máxima. */
+:root {
+  /* Paleta */
+  --color-bg: #FAF6F0;          /* Crema — fondo siempre */
+  --color-bg-card: #F5EFE6;     /* Crema profunda — cards */
+  --color-text: #2D1B3D;        /* Berenjena — texto principal, trazos */
+  --color-text-soft: #3A3340;   /* Tinta — texto secundario */
+  --color-miriam: #A855B5;      /* Violeta Miriam — FIRMA (identidad) */
+  --color-miriam-soft: #E8D4ED; /* Violeta soft — badges genómicos */
+  --color-cta: #FF6B47;         /* Coral — ACCIÓN (CTA único) */
+  --color-cta-hover: #E5573A;
+
+  /* Aliases semánticos */
+  --color-link: var(--color-miriam);
+  --color-emphasis: var(--color-miriam);
+  --color-action: var(--color-cta);
+
+  /* Tipografía */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Espaciado (múltiplos de 8) */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-12: 96px;
+  --space-16: 128px;
+
+  /* Radios */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-btn: 12px;
+  --radius-card: 16px;
+  --radius-pill: 9999px;
+
+  /* Lectura */
+  --measure: 65ch;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0;
+  text-wrap: balance;
+}
+p { margin: 0; text-wrap: pretty; }
+a { color: var(--color-link); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+code, kbd, samp { font-family: var(--font-mono); }
+
+/* Botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease;
+  border: none;
+  font-size: 16px;
+  line-height: 1;
+}
+.btn-primary {
+  background: var(--color-cta);
+  color: var(--color-bg);
+  padding: 14px 24px;
+}
+.btn-primary:hover { background: var(--color-cta-hover); transform: translateY(-1px); text-decoration: none; }
+.btn-secondary {
+  background: transparent;
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
+  padding: 12px 22px;
+}
+.btn-secondary:hover { background: var(--color-text); color: var(--color-bg); text-decoration: none; }
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text);
+  padding: 12px 16px;
+}
+.btn-ghost:hover { color: var(--color-miriam); text-decoration: none; }
+
+/* Badge marcador genómico */
+.badge-genomic {
+  display: inline-block;
+  background: var(--color-miriam-soft);
+  color: var(--color-miriam);
+  border-radius: var(--radius-pill);
+  padding: 4px 12px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+/* Card */
+.card {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-card);
+  padding: var(--space-4);
+  border: 1px solid rgba(45, 27, 61, 0.08);
+}
+
+/* Cifras */
+.stat-number {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 6vw, 72px);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: var(--color-text);
+}
+.stat-number--firma { color: var(--color-miriam); }
+.stat-number--cta   { color: var(--color-cta); }
+.stat-label {
+  font-size: 13px;
+  color: var(--color-text-soft);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* Eyebrow */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-soft);
+}
