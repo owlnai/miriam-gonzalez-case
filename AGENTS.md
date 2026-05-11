@@ -224,7 +224,7 @@ Have a good idea or noticed something that could be improved?
 - [x] ~~Migrate timeline to `.md`~~ → Migrated to YAML in `content/es|en/timeline.yml`
 - [ ] ~~Configure custom domain~~ → **helpmiriam.com**
 - [ ] Consider adding an RSS feed for timeline updates
-- [ ] Analytics (Plausible or similar, not Google Analytics — consistency with privacy message)
+- [x] ~~Analytics~~ → `@nuxtjs/plausible` 3.0.2 (privacy-first, ignores localhost, consistent with privacy message)
 
 ### SEO
 

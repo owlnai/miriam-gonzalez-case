@@ -10,6 +10,7 @@ An informational website about Miriam González Pérez's case: metastatic breast
 - **@nuxtjs/seo** — SEO meta, OG images, robots, sitemap, schema.org
 - **@nuxtjs/sitemap** — XML sitemap with i18n hreflang
 - **nuxt-ai-ready** — AI/LLM readiness (`/llms.txt`)
+- **@nuxtjs/plausible** — privacy-first analytics (ignores localhost)
 - **Tailwind CSS** — styles
 - **@nuxt/icon** — icons (Phosphor Icons via Iconify)
 - **Netlify Forms** — contact form (no backend)

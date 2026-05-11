@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-04-01',
 
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n', '@nuxt/icon', '@nuxtjs/seo', '@nuxtjs/sitemap', '@nuxt/content', 'nuxt-ai-ready'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n', '@nuxt/icon', '@nuxtjs/seo', '@nuxtjs/sitemap', '@nuxt/content', 'nuxt-ai-ready', '@nuxtjs/plausible'],
 
   site: {
     url: 'https://helpmiriam.com',
@@ -22,6 +22,10 @@ export default defineNuxtConfig({
         },
       ],
     },
+  },
+
+  plausible: {
+    ignoredHostnames: ['localhost'],
   },
 
   i18n: {
