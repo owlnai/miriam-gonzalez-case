@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+# block design-system
+Disallow: /design-system/
 
 Sitemap: https://helpmiriam.com/sitemap.xml
