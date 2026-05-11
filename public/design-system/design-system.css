@@ -1,6 +1,9 @@
 /* Sistema de diseño · Caso Miriam — page-specific styles
    Imports tokens.css for variables and base components. */
 
+/* Prevent horizontal overflow globally */
+html, body { overflow-x: hidden; max-width: 100%; }
+
 /* Layout shell */
 .ds-shell {
   display: grid;
@@ -16,6 +19,7 @@
   border-right: 1px solid rgba(45, 27, 61, 0.08);
   background: var(--color-bg);
   overflow: auto;
+  min-width: 0;
 }
 .ds-side h2 {
   font-family: var(--font-mono);
@@ -72,6 +76,8 @@
 .ds-main {
   padding: 64px 8vw 128px;
   max-width: 1200px;
+  min-width: 0;
+  overflow-x: hidden;
 }
 .ds-section {
   margin-bottom: 96px;
@@ -186,6 +192,8 @@
   border-collapse: collapse;
   margin: 24px 0;
   font-size: 14px;
+  display: block;
+  overflow-x: auto;
 }
 .ratio-table th,
 .ratio-table td {
@@ -387,6 +395,8 @@
   width: 100%;
   border-collapse: collapse;
   font-size: 14px;
+  display: block;
+  overflow-x: auto;
 }
 .mol-table th,
 .mol-table td {
@@ -641,6 +651,12 @@ ul.checklist.dont li::before {
   line-height: 1.6;
 }
 
+/* Responsive grid utilities */
+.grid-2 { grid-template-columns: 1fr 1fr; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-2 > *, .grid-3 > *, .grid-4 > * { min-width: 0; }
+
 @media (max-width: 900px) {
   .ds-shell { grid-template-columns: 1fr; }
   .ds-side {
@@ -655,4 +671,16 @@ ul.checklist.dont li::before {
   .specimen.h1 .glyph { font-size: 56px; }
   .specimen.h2 .glyph { font-size: 40px; }
   .specimen.stat .glyph { font-size: 80px; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .ds-main { padding: 40px 5vw 80px; }
+  .ds-hero { padding: 48px 5vw 40px; }
+}
+
+@media (max-width: 600px) {
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: 1fr; }
+  .ds-main { padding: 24px 4vw 64px; }
+  .ds-hero { padding: 32px 4vw 32px; }
+  .ratio-bar { width: 80px; }
 }

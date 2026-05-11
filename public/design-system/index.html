@@ -96,7 +96,7 @@ Caso Miriam .</h1>
         Una sola fuente de verdad para diseñadores, redactores y devs. La voz Miriam no se inventa cada vez — se hereda. Antes de añadir un componente nuevo, busca el patrón aquí; si no está, llévalo a una sección existente antes de improvisar.
       </p>
 
-      <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 32px;">
+      <div class="grid-3" style="display:grid; gap: 20px; margin-top: 32px;">
         <div style="background: var(--color-bg-card); border-radius: 14px; padding: 24px;">
           <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-miriam); margin-bottom: 8px;">Si diseñas</div>
           <h3 style="margin: 0 0 12px; font-size: 20px;">Trabaja en Figma.</h3>
@@ -378,7 +378,7 @@ Caso Miriam .</h1>
       <h3 style="margin-top: 40px">Combinaciones permitidas</h3>
       <p style="font-size: 14px; color: var(--color-text-soft); max-width: 64ch;">Reglas rápidas para números sobre tarjetas, badges y datos clínicos. Solo estos pares cumplen contraste AA y respetan la jerarquía del sistema.</p>
 
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px;">
+      <div class="grid-3" style="display: grid; gap: 16px; margin-top: 16px;">
         <div style="background: #FAF6F0; border-radius: 10px; padding: 24px; border: 1px solid rgba(45,27,61,0.08);">
           <div style="font-family: var(--font-display); font-weight: 600; font-size: 40px; color: #2D1B3D; line-height: 1;">×13</div>
           <div style="font-family: var(--font-mono); font-size: 11px; color: rgba(45,27,61,0.6); margin-top: 8px;">FGFR1 amplificación</div>
@@ -424,7 +424,7 @@ Caso Miriam .</h1>
         Lo mismo aplicado a cards con titular + cuerpo + etiqueta. Cada tarjeta lleva en su pie el ratio de contraste real (calculado WCAG 2.2). Las que están aquí <strong>pasan AA</strong> en el texto principal y AAA en titulares grandes — son las que puedes usar sin pensar.
       </p>
 
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px;">
+      <div class="grid-2" style="display: grid; gap: 16px; margin-top: 16px;">
 
         <!-- Card 1: berenjena s/ crema -->
         <div style="background: #FAF6F0; border-radius: 12px; padding: 28px; border: 1px solid rgba(45,27,61,0.08);">
@@ -481,7 +481,7 @@ Caso Miriam .</h1>
         Mismas cards, combinaciones rotas. Si te sale alguna de estas, descártala. El ratio en el pie te dice por qué.
       </p>
 
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px;">
+      <div class="grid-2" style="display: grid; gap: 16px; margin-top: 16px;">
 
         <!-- Bad 1: violeta firma s/ berenjena -->
         <div style="background: #2D1B3D; border-radius: 12px; padding: 28px; position: relative;">
@@ -669,7 +669,7 @@ Caso Miriam .</h1>
       <p style="font-size: 14px; color: var(--color-text-soft); max-width: 64ch;">
         Diez iconos que mapean uno a uno con las secciones del sitio. Mantienen el ADN BTP en lo conceptual (cuerpos rellenos, un solo acento por pieza) aunque la línea aún es vectorial limpia, no la tinta a mano del set original.
       </p>
-      <div class="icon-grid" style="grid-template-columns: repeat(5, 1fr); margin-top: 16px;">
+      <div class="icon-grid" style="margin-top: 16px;">
         <div class="icon-tile" style="background: transparent;"><img src="assets/icons-web/caso.svg" alt="caso" style="width:100%;display:block;"/><span class="name">caso</span></div>
         <div class="icon-tile" style="background: transparent;"><img src="assets/icons-web/equipo.svg" alt="equipo" style="width:100%;display:block;"/><span class="name">equipo</span></div>
         <div class="icon-tile" style="background: transparent;"><img src="assets/icons-web/historia.svg" alt="historia" style="width:100%;display:block;"/><span class="name">historia</span></div>
@@ -689,7 +689,7 @@ Caso Miriam .</h1>
       <p style="font-size: 14px; color: var(--color-text-soft); max-width: 64ch;">
         El set original de la marca paraguas. <strong style="color:var(--color-text)">No es inventario activo del caso</strong> — se incluye solo como referencia de la sintaxis visual de la que hereda el set Caso Miriam (mismo trazo, mismas masas, mismo uso de un acento). Si necesitas un icono que no existe en el set operativo, amplíalo siguiendo este lenguaje, no copiando del BTP.
       </p>
-      <div class="icon-grid" style="grid-template-columns: repeat(4, 1fr);">
+      <div class="icon-grid">
         <div class="icon-tile" style="padding: 0; overflow: hidden;"><img src="assets/icons/01_comunidad.png" alt="comunidad" style="width:100%;display:block;"/><span class="name" style="padding: 8px 12px;">comunidad</span></div>
         <div class="icon-tile" style="padding: 0; overflow: hidden;"><img src="assets/icons/02_anuncios.png" alt="anuncios" style="width:100%;display:block;"/><span class="name" style="padding: 8px 12px;">anuncios</span></div>
         <div class="icon-tile" style="padding: 0; overflow: hidden;"><img src="assets/icons/03_general.png" alt="general" style="width:100%;display:block;background:#2D1B3D"/><span class="name" style="padding: 8px 12px;">general · logo BTP</span></div>
@@ -725,7 +725,7 @@ Caso Miriam .</h1>
         Cuando hace falta un icono nuevo (concepto que no está cubierto), generarlo desde cero con un prompt de texto plano <strong>siempre</strong> da una pieza con línea distinta — no encaja en el set y se nota. La forma fiable de extenderlo es con una herramienta que acepte <em>image reference</em>: pasarle 1–3 iconos BTP existentes como referencia plástica, no como inspiración temática. Así el modelo replica grosor de línea, sombreado por hatching y textura del papel.
       </p>
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; max-width: 76ch;">
+      <div class="grid-2" style="display: grid; gap: 16px; margin-bottom: 16px; max-width: 76ch;">
         <div class="rule do" style="padding: 14px 16px;">
           <div class="rule-h" style="font-size:13px">Herramientas con <em>image reference</em></div>
           <ul style="margin: 8px 0 0; padding-left: 18px; font-size: 13px; color: var(--color-text); line-height: 1.7;">
@@ -844,7 +844,7 @@ Caso Miriam .</h1>
         La marca a 16 px. Una <em>m</em> minúscula en cursiva Fraunces sobre violeta firma, rodeada de una constelación mínima de destellos. Es la única superficie del sistema donde la inicial sustituye al retrato — a ese tamaño, la ilustración se pierde.
       </p>
 
-      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px;">
+      <div class="grid-2" style="display:grid; gap: 24px; margin-top: 32px;">
         <div style="background: var(--color-bg-card); border-radius: 14px; padding: 32px; text-align: center;">
           <img src="favicon.svg" alt="" style="width: 200px; height: 200px; display: block; margin: 0 auto;"/>
           <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-soft); margin-top: 16px;">favicon.svg · principal</div>
@@ -1102,7 +1102,7 @@ Caso Miriam .</h1>
         Comunidad sin individualismo. Transparencia sobre fracasos clínicos.
       </p>
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+      <div class="grid-2" style="display: grid; gap: 32px;">
         <div>
           <h3 style="color: var(--color-miriam); border-bottom-color: rgba(168,85,181,0.2)">Lo que SÍ es</h3>
           <ul class="checklist">
@@ -1159,7 +1159,7 @@ Caso Miriam .</h1>
             BC-NED), fechas concretas, nombres propios.</pre>
 
       <h3 style="margin-top: 40px">Reglas duras de léxico</h3>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px;">
+      <div class="grid-2" style="display: grid; gap: 16px; margin-bottom: 32px;">
         <div class="rule do">
           <div class="rule-h">Sí — palabras del caso</div>
           <ul style="margin: 8px 0 0; padding-left: 18px; font-size: 14px; color: var(--color-text); line-height: 1.8;">
@@ -1419,7 +1419,7 @@ Alejandro, Ceci, Alby, Alba. Same level of detail. Same line work.</pre>
       </p>
 
       <h3>Principios — neurodivergencia friendly</h3>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 16px;">
+      <div class="grid-2" style="display: grid; gap: 24px; margin-top: 16px;">
         <div class="rule do">
           <div class="rule-h">Información escaneable</div>
           <p>Eyebrows, h2 corto, lede de 1–2 frases, párrafos &lt;4 líneas. Cifras destacadas como ancla visual. La página se entiende leyendo solo titulares.</p>
@@ -1493,7 +1493,7 @@ Alejandro, Ceci, Alby, Alba. Same level of detail. Same line work.</pre>
 }</pre>
 
       <h3 style="margin-top: 40px">Checklist de revisión — antes de publicar</h3>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 72ch;">
+      <div class="grid-2" style="display: grid; gap: 12px; max-width: 72ch;">
         <div class="rule do" style="padding: 14px 16px;"><div class="rule-h" style="font-size:13px">Tab navigation completa</div><p style="font-size:13px">Todo el contenido alcanzable solo con teclado. Sin trampas de foco.</p></div>
         <div class="rule do" style="padding: 14px 16px;"><div class="rule-h" style="font-size:13px">Lighthouse / axe</div><p style="font-size:13px">Accessibility ≥ 95. Cero violaciones críticas.</p></div>
         <div class="rule do" style="padding: 14px 16px;"><div class="rule-h" style="font-size:13px">Lectura con NVDA/VoiceOver</div><p style="font-size:13px">El orden lógico de lectura tiene sentido. Sin secciones huérfanas.</p></div>
@@ -1577,7 +1577,7 @@ Alejandro, Ceci, Alby, Alba. Same level of detail. Same line work.</pre>
         Tres capas, tres usos. <strong>Miriam</strong> es el nombre del proyecto y del sistema. <strong>helpmiriam.com</strong> es el dominio funcional — el destino de cualquier CTA. <strong>Beyond the Protocol</strong> es la marca paraguas que firma todo. Si las separas bien, no se pisan.
       </p>
 
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px;">
+      <div class="grid-3" style="display: grid; gap: 16px; margin-top: 32px;">
         <div style="background: #FAF6F0; border: 1px solid rgba(45,27,61,0.08); border-radius: 12px; padding: 24px;">
           <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-soft);">Marca / proyecto</div>
           <h3 style="font-family: var(--font-display); font-weight: 500; font-size: 32px; margin: 8px 0 12px; color: #2D1B3D;">Miriam<span style="color:#A855B5">.</span></h3>
@@ -1639,7 +1639,7 @@ Alejandro, Ceci, Alby, Alba. Same level of detail. Same line work.</pre>
       </p>
 
       <h3 style="margin-top: 32px">Qué tipo de foto entra y qué no</h3>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px;">
+      <div class="grid-2" style="display: grid; gap: 16px; margin-top: 16px;">
         <div class="rule do" style="padding: 16px;">
           <div class="rule-h">Sí — qué buscamos</div>
           <ul style="margin:8px 0 0; padding-left:18px; font-size:13.5px; line-height:1.7; color:var(--color-text);">
@@ -1694,7 +1694,7 @@ Alejandro, Ceci, Alby, Alba. Same level of detail. Same line work.</pre>
       </p>
 
       <h3 style="margin-top: 32px">Inputs — formulario de donación</h3>
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px;">
+      <div class="grid-2" style="display: grid; gap: 16px; margin-top: 16px;">
         <!-- default -->
         <div style="background: #FAF6F0; border:1px solid rgba(45,27,61,0.08); border-radius:12px; padding:24px;">
           <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:var(--color-text-soft); margin-bottom:8px;">Default</div>
@@ -1827,7 +1827,7 @@ Alejandro, Ceci, Alby, Alba. Same level of detail. Same line work.</pre>
 
       <h3 style="margin-top: 40px">Cifras clave actualizadas</h3>
       <p style="font-size:14px; color:var(--color-text-soft); max-width:64ch;">Mantener actualizadas. Cualquier cifra que aparezca en prensa pero no aquí, no se ha cruzado por el equipo. Estas son la fuente única.</p>
-      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:16px;">
+      <div class="grid-4" style="display:grid; gap:12px; margin-top:16px;">
         <div style="background:#FAF6F0; border:1px solid rgba(45,27,61,0.08); border-radius:10px; padding:20px;"><div style="font-family:var(--font-display); font-weight:600; font-size:36px; color:#A855B5; line-height:1;">×13</div><div style="font-family:var(--font-mono); font-size:11px; color:var(--color-text-soft); margin-top:6px;">FGFR1 amplificación</div></div>
         <div style="background:#FAF6F0; border:1px solid rgba(45,27,61,0.08); border-radius:10px; padding:20px;"><div style="font-family:var(--font-display); font-weight:600; font-size:36px; color:#A855B5; line-height:1;">4</div><div style="font-family:var(--font-mono); font-size:11px; color:var(--color-text-soft); margin-top:6px;">casos en literatura</div></div>
         <div style="background:#FAF6F0; border:1px solid rgba(45,27,61,0.08); border-radius:10px; padding:20px;"><div style="font-family:var(--font-display); font-weight:600; font-size:36px; color:#A855B5; line-height:1;">12</div><div style="font-family:var(--font-mono); font-size:11px; color:var(--color-text-soft); margin-top:6px;">especialistas en equipo</div></div>
