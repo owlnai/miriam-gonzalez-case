@@ -2,7 +2,7 @@
    Imports tokens.css for variables and base components. */
 
 /* Prevent horizontal overflow globally */
-html, body { overflow-x: hidden; max-width: 100%; }
+body { overflow-x: hidden; max-width: 100%; }
 
 /* Layout shell */
 .ds-shell {
