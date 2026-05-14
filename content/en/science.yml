@@ -18,41 +18,114 @@ treatments:
       discontinued due to bone progression and hepatic toxicity (DILI G2-3).
       Zoladex and zoledronic acid continue. ECOG 0. No visceral crisis.
     active: true
-papers:
-  - ref: 'Frontiers in Medicine, 2025'
-    finding: >-
-      Neuroendocrine breast carcinoma (NEBC): The FGFR1 profile is the main
-      driver
-    relevance: >-
-      This case series is the most recent publication on the genomic profile of
-      NEBC. It confirms that alterations in the FGFR1/2 and PI3K/AKT/mTOR
-      pathways are canonical in this extremely rare subtype, validating the
-      clinical strategy of targeting Miriam's FGFR1 amplification.
-    link: 'https://doi.org/10.3389/fmed.2025.1551309'
-  - ref: Ignite Proteomics y Dana-Farber Cancer Institute (2025-2026)
-    finding: 'Functional proteomics: Analyzing proteins, not just DNA'
-    relevance: >-
-      Recent studies show that protein profiling (RPPA) predicts therapeutic
-      responses more accurately than standard genomics. It is vital in complex
-      tumors to identify which active proteins are driving treatment resistance,
-      going beyond DNA mutations alone.
-    link: null
-  - ref: 'Ozaki et al., 2022 — Cancers (DOI: 10.3390/cancers14010196)'
-    finding: 'Neuroendocrine neoplasms of the breast: WHO classification and prognosis'
-    relevance: >-
-      Comprehensive review synthesising the WHO 2019 classification and
-      providing survival data across the neuroendocrine spectrum of breast
-      cancer. It contextualizes the rarity and poorer prognosis associated with
-      this component in Miriam's case.
-    link: 'https://doi.org/10.3390/cancers14010196'
-  - ref: 'Formisano et al., 2019 — Nat. Commun. (DOI: 10.1038/s41467-019-09068-2)'
-    finding: 'FGFR1 amplification: central resistance mechanism to CDK4/6 inhibitors'
-    relevance: >-
-      Mechanistic study identifying FGFR1 amplification as a central driver of
-      resistance to therapies like ribociclib and fulvestrant in metastatic ER+
-      tumors. It directly explains the early clinical progression observed in
-      the first line of treatment.
-    link: 'https://doi.org/10.1038/s41467-019-09068-2'
+paperSections:
+  - title: Section 1 — Neuroendocrine Transition and RB1 Loss
+    subtitle: Most critical recent finding, 3 RB1 mutations detected in Guardant360 (April 2026)
+    papers:
+      - ref: 'Park et al., 2018 — Science (DOI: 10.1126/science.aat5749)'
+        finding: 'RB1 + TP53 loss: reprogramming toward a neuroendocrine phenotype'
+        relevance: >-
+          Foundational experimental study showing that combined RB1 and TP53
+          loss reprograms hormone-dependent epithelial tissues toward an
+          aggressive neuroendocrine phenotype. It is the direct biological basis
+          of neuroendocrine transition risk in this case, where 3 distinct RB1
+          mutations were detected in Guardant360 liquid biopsy (April 2026).
+        link: 'https://doi.org/10.1126/science.aat5749'
+      - ref: 'Aggarwal et al., 2018 — Journal of Clinical Oncology (DOI: 10.1200/JCO.2017.77.6880)'
+        finding: 'Neuroendocrine transition under hormonal pressure: 17% of hormone-dependent tumors'
+        relevance: >-
+          Prospective multi-institutional study documenting that 17% of patients
+          with hormone-dependent tumors under targeted therapy develop transition
+          to small-cell neuroendocrine phenotype through RB1 loss. This
+          molecular paradigm is transferable to HR+ breast cancer under
+          prolonged endocrine pressure, as in this case after 25 months of
+          endocrine therapy + CDK4/6i.
+        link: 'https://doi.org/10.1200/JCO.2017.77.6880'
+      - ref: 'Cancer Discovery, 2025 — Integrative review (DOI: 10.1158/2159-8290.CD-24-0837)'
+        finding: 'Neuroendocrine transformation as an acquired resistance mechanism'
+        relevance: >-
+          Integrative review confirming combined RB1 + TP53 loss as the
+          molecular hallmark of neuroendocrine transformation in
+          hormone-dependent epithelial tumors (prostate, breast, lung). It
+          synthesizes recent evidence and reinforces the biological rationale
+          for exploring the neuroendocrine axis when RB1 alterations emerge
+          under prolonged hormonal therapy.
+        link: 'https://doi.org/10.1158/2159-8290.CD-24-0837'
+  - title: Section 2 — Biology of Breast Carcinoma with Neuroendocrine Differentiation
+    subtitle: Subtype characterization, BC-NED with 80% Cg/Syn
+    papers:
+      - ref: 'Marchiò et al., 2017 — Journal of Pathology (DOI: 10.1002/path.4837)'
+        finding: 'Genomic landscape of breast carcinoma with neuroendocrine differentiation'
+        relevance: >-
+          Genomic characterization of breast carcinomas with extensive
+          neuroendocrine differentiation (>50% Cg/Syn) identifying a molecular
+          landscape distinct from classic NST, enriched for CCND1, FGFR1, and
+          PI3K pathway alterations. The described profile matches this case
+          (CCND1 ×20, FGFR1 ×13, amplified 11q13 cluster).
+        link: 'https://doi.org/10.1002/path.4837'
+      - ref: 'Pareja et al., 2022 — Journal of Clinical Pathology (DOI: 10.1136/jclinpath-2020-207002)'
+        finding: 'Breast neuroendocrine tumors: WHO 5th edition classification and comparative biology'
+        relevance: >-
+          Application of WHO 5th edition (2019) diagnostic criteria to breast
+          neuroendocrine tumors, with genomic comparison against
+          gastroenteropancreatic NETs and mucinous breast carcinomas. It
+          documents that some tumors acquire late neuroendocrine
+          differentiation under therapeutic pressure, relevant to this clinical
+          trajectory.
+        link: 'https://doi.org/10.1136/jclinpath-2020-207002'
+  - title: Section 3 — SSTR2 Pathway and Radioligand Therapy (PRRT)
+    subtitle: Rationale to request SSTR2 IHC and DOTATATE PET as a reserve therapeutic branch
+    papers:
+      - ref: 'Terlević et al., 2019 — Annals of Diagnostic Pathology (DOI: 10.1016/j.anndiagpath.2018.11.002)'
+        finding: 'SSTR2 expression in neuroendocrine breast carcinoma: 71% positive'
+        relevance: >-
+          Immunohistochemical study showing that 71% of neuroendocrine breast
+          carcinomas express SSTR2A with intensity sufficient to consider PRRT
+          with 177Lu-DOTATATE. Supports requesting SSTR2 IHC in future
+          rebiopsies and DOTATATE PET as functional screening.
+        link: 'https://doi.org/10.1016/j.anndiagpath.2018.11.002'
+      - ref: 'Sharma et al., 2021 — European Journal of Nuclear Medicine and Molecular Imaging (DOI: 10.1007/s00259-020-05054-9)'
+        finding: '177Lu-DOTATATE in metastatic neuroendocrine breast cancer: clinical evidence'
+        relevance: >-
+          Clinical series of metastatic neuroendocrine breast cancer patients
+          treated with PRRT (177Lu-DOTATATE), showing response rates and
+          progression-free survival comparable to gastroenteropancreatic NETs.
+          Provides the strongest available clinical evidence that PRRT can work
+          in this breast tumor subtype.
+        link: 'https://doi.org/10.1007/s00259-020-05054-9'
+  - title: Section 4 — FGFR1/CCND1 Axis and CDK4/6i Resistance
+    subtitle: Molecular mechanism behind the observed clinical resistance in the first two lines
+    papers:
+      - ref: 'Formisano et al., 2019 — Nature Communications (DOI: 10.1038/s41467-019-09367-8)'
+        finding: 'FGFR1 as a resistance driver to endocrine therapy and CDK4/6i in HR+/HER2- breast cancer'
+        relevance: >-
+          Molecular study showing that FGFR1 amplification functionally
+          activates PI3K/AKT/mTOR signaling even without PIK3CA mutation and
+          represents a known acquired resistance mechanism to endocrine therapy
+          and CDK4/6 inhibitors in HR+/HER2- breast cancer. It explains the
+          clinical resistance observed in the first two treatment lines.
+        link: 'https://doi.org/10.1038/s41467-019-09367-8'
+  - title: Section 5 — International Consensus Guidelines
+    subtitle: Formal support for the clinical requests presented to the treating team
+    papers:
+      - ref: 'NCCN Guidelines — Neuroendocrine and Adrenal Tumors, Version 1.2025'
+        finding: 'International algorithm for neuroendocrine tumors of breast origin'
+        relevance: >-
+          NCCN 2025 guidelines include a therapeutic algorithm for
+          neuroendocrine tumors of breast origin with SSTR2 expression, where
+          PRRT (177Lu-DOTATATE) is listed as an option after failure of standard
+          hormonal therapy. Spanish SEOM guidelines do not yet include this
+          algorithm for neuroendocrine breast disease, explaining the
+          discrepancy between national and international recommendations.
+        link: null
+      - ref: 'ENETS Consensus Guidelines, 2023 — European Neuroendocrine Tumor Society'
+        finding: 'European recommendation: evaluate SSTR2 in advanced neuroendocrine breast carcinomas'
+        relevance: >-
+          ENETS 2023 consensus recommends assessing SSTR2 expression and
+          considering functional DOTATATE imaging in advanced neuroendocrine
+          carcinomas to stratify eligibility for somatostatin receptor-targeted
+          therapies, including PRRT when appropriate.
+        link: null
 panelRows:
   - component: Broad NGS (tissue)
     method: Panel ≥500 genes

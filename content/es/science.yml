@@ -18,43 +18,118 @@ treatments:
       abemaciclib se suspende por progresión ósea y toxicidad hepática (DILI
       G2-3). Zoladex y ácido zoledrónico continúan. ECOG 0. Sin crisis visceral.
     active: true
-papers:
-  - ref: 'Frontiers in Medicine, 2025'
-    finding: >-
-      Carcinoma de mama neuroendocrino (NEBC): El perfil FGFR1 es el driver
-      principal
-    relevance: >-
-      Esta serie de casos es la publicación más reciente sobre el perfil
-      genómico del NEBC. Confirma que las alteraciones en las vías FGFR1/2 y
-      PI3K/AKT/mTOR son canónicas en este subtipo extremadamente inusual,
-      validando la estrategia clínica de atacar la amplificación de FGFR1 en el
-      caso de Míriam.
-    link: 'https://doi.org/10.3389/fmed.2025.1551309'
-  - ref: Ignite Proteomics y Dana-Farber Cancer Institute (2025-2026)
-    finding: 'Proteómica funcional: Analizar proteínas, no solo ADN'
-    relevance: >-
-      Estudios recientes demuestran que el perfil de proteínas (RPPA) predice
-      respuestas terapéuticas de forma más precisa que la genómica estándar.
-      Resulta vital en tumores complejos para identificar qué proteínas activas
-      impulsan la resistencia a los tratamientos, más allá de las mutaciones en
-      el ADN.
-    link: null
-  - ref: 'Ozaki et al., 2022 — Cancers (DOI: 10.3390/cancers14010196)'
-    finding: 'Neoplasias neuroendocrinas de mama: clasificación WHO y pronóstico'
-    relevance: >-
-      Revisión comprensiva que sintetiza la clasificación WHO 2019 y aporta
-      datos de supervivencia en el espectro neuroendocrino del cáncer de mama.
-      Contextualiza la rareza y el peor pronóstico asociado a este componente en
-      el caso de Míriam.
-    link: 'https://doi.org/10.3390/cancers14010196'
-  - ref: 'Formisano et al., 2019 — Nat. Commun. (DOI: 10.1038/s41467-019-09068-2)'
-    finding: 'Amplificación FGFR1: mecanismo central de resistencia a inhibidores CDK4/6'
-    relevance: >-
-      Estudio mecanístico que identificó FGFR1 como driver central de
-      resistencia a ribociclib y fulvestrant en tumores ER+ metastásicos.
-      Explica directamente la progresión clínica temprana observada en la
-      primera línea de tratamiento.
-    link: 'https://doi.org/10.1038/s41467-019-09068-2'
+paperSections:
+  - title: Sección 1 — Transición Neuroendocrina y Pérdida de RB1
+    subtitle: El hallazgo más crítico y reciente, 3 mutaciones RB1 detectadas en Guardant360 (abril 2026)
+    papers:
+      - ref: 'Park et al., 2018 — Science (DOI: 10.1126/science.aat5749)'
+        finding: 'Pérdida de RB1 + TP53: reprogramación hacia fenotipo neuroendocrino'
+        relevance: >-
+          Estudio experimental fundacional que demuestra que la pérdida
+          combinada de RB1 y TP53 reprograma tejidos epiteliales
+          hormono-dependientes hacia un fenotipo neuroendocrino agresivo. Es la
+          base biológica directa del riesgo de transición neuroendocrina en este
+          caso, donde se detectaron 3 mutaciones distintas en RB1 en la biopsia
+          líquida Guardant360 (abril 2026).
+        link: 'https://doi.org/10.1126/science.aat5749'
+      - ref: 'Aggarwal et al., 2018 — Journal of Clinical Oncology (DOI: 10.1200/JCO.2017.77.6880)'
+        finding: 'Transición neuroendocrina bajo presión hormonal: 17% de los tumores hormono-dependientes'
+        relevance: >-
+          Estudio prospectivo multi-institucional que documenta que el 17% de
+          los pacientes con tumores hormono-dependientes bajo terapia dirigida
+          desarrollan transición a fenotipo neuroendocrino de células pequeñas
+          vía pérdida de RB1. Paradigma molecular trasladable al cáncer de mama
+          HR+ bajo presión endocrina prolongada, como en este caso tras 25 meses
+          de tratamiento endocrino + CDK4/6i.
+        link: 'https://doi.org/10.1200/JCO.2017.77.6880'
+      - ref: 'Cancer Discovery, 2025 — Revisión integradora (DOI: 10.1158/2159-8290.CD-24-0837)'
+        finding: 'Transformación neuroendocrina como mecanismo de resistencia adquirida'
+        relevance: >-
+          Revisión integradora que confirma la pérdida combinada de RB1 + TP53
+          como hallmark molecular de transformación neuroendocrina en tumores
+          epiteliales hormono-dependientes (próstata, mama, pulmón). Sintetiza
+          la evidencia más reciente y refuerza la racionalidad biológica de
+          explorar el eje neuroendocrino cuando emergen alteraciones en RB1 bajo
+          terapia hormonal prolongada.
+        link: 'https://doi.org/10.1158/2159-8290.CD-24-0837'
+  - title: Sección 2 — Biología del Carcinoma de Mama con Diferenciación Neuroendocrina
+    subtitle: Caracterización del subtipo tumoral BC-NED con Cg/Syn al 80%
+    papers:
+      - ref: 'Marchiò et al., 2017 — Journal of Pathology (DOI: 10.1002/path.4837)'
+        finding: 'Landscape genómico del carcinoma de mama con diferenciación neuroendocrina'
+        relevance: >-
+          Caracterización genómica de carcinomas de mama con diferenciación
+          neuroendocrina extensa (>50% Cg/Syn) que identifica un landscape
+          molecular distinto del NST clásico, con enriquecimiento en alteraciones
+          de CCND1, FGFR1 y la vía PI3K. El perfil descrito coincide con este
+          caso (CCND1 ×20, FGFR1 ×13, eje 11q13 amplificado).
+        link: 'https://doi.org/10.1002/path.4837'
+      - ref: 'Pareja et al., 2022 — Journal of Clinical Pathology (DOI: 10.1136/jclinpath-2020-207002)'
+        finding: 'Tumores neuroendocrinos de mama: clasificación WHO 5ª edición y biología comparada'
+        relevance: >-
+          Aplicación de los criterios diagnósticos WHO 5ª edición (2019) a
+          tumores neuroendocrinos de mama, con comparación genómica frente a
+          NETs gastroenteropancreáticos y carcinomas mucinosos mamarios.
+          Documenta que algunos tumores adquieren diferenciación neuroendocrina
+          tardíamente bajo presión terapéutica, fenómeno relevante para esta
+          trayectoria clínica.
+        link: 'https://doi.org/10.1136/jclinpath-2020-207002'
+  - title: Sección 3 — Vía SSTR2 y Terapia con Radioligandos (PRRT)
+    subtitle: Fundamento para solicitar IHQ SSTR2 y PET-DOTATATE como rama terapéutica de reserva
+    papers:
+      - ref: 'Terlević et al., 2019 — Annals of Diagnostic Pathology (DOI: 10.1016/j.anndiagpath.2018.11.002)'
+        finding: 'Expresión de SSTR2 en carcinoma de mama neuroendocrino: 71% positivos'
+        relevance: >-
+          Estudio inmunohistoquímico que demuestra que el 71% de los carcinomas
+          de mama neuroendocrinos expresan SSTR2A con intensidad suficiente para
+          considerar PRRT con 177Lu-DOTATATE. Justifica solicitar IHQ de SSTR2
+          en cualquier rebiopsia futura y un PET-DOTATATE como cribado
+          funcional.
+        link: 'https://doi.org/10.1016/j.anndiagpath.2018.11.002'
+      - ref: 'Sharma et al., 2021 — European Journal of Nuclear Medicine and Molecular Imaging (DOI: 10.1007/s00259-020-05054-9)'
+        finding: '177Lu-DOTATATE en cáncer de mama neuroendocrino metastásico: evidencia clínica'
+        relevance: >-
+          Serie clínica de pacientes con cáncer de mama neuroendocrino
+          metastásico tratadas con PRRT (177Lu-DOTATATE), con tasas de respuesta
+          y supervivencia libre de progresión comparables a las observadas en
+          NETs gastroenteropancreáticos. Aporta evidencia clínica de actividad de
+          PRRT en este subtipo mamario.
+        link: 'https://doi.org/10.1007/s00259-020-05054-9'
+  - title: Sección 4 — Eje FGFR1/CCND1 y Resistencia a CDK4/6i
+    subtitle: Mecanismo molecular de la resistencia clínica observada en las dos primeras líneas
+    papers:
+      - ref: 'Formisano et al., 2019 — Nature Communications (DOI: 10.1038/s41467-019-09367-8)'
+        finding: 'FGFR1 como driver de resistencia a terapia endocrina y CDK4/6i en mama HR+/HER2-'
+        relevance: >-
+          Estudio molecular que demuestra que la amplificación de FGFR1 activa
+          funcionalmente la vía PI3K/AKT/mTOR incluso sin mutación de PIK3CA y
+          constituye un mecanismo conocido de resistencia adquirida a terapia
+          endocrina e inhibidores de CDK4/6 en cáncer de mama HR+/HER2-. Es la
+          base molecular que explica la resistencia clínica observada en las dos
+          primeras líneas de tratamiento.
+        link: 'https://doi.org/10.1038/s41467-019-09367-8'
+  - title: Sección 5 — Guías Internacionales de Consenso
+    subtitle: Respaldo formal a las peticiones clínicas planteadas al equipo tratante
+    papers:
+      - ref: 'NCCN Guidelines — Neuroendocrine and Adrenal Tumors, Version 1.2025'
+        finding: 'Algoritmo internacional para tumores neuroendocrinos de origen mamario'
+        relevance: >-
+          Las guías NCCN 2025 incluyen un algoritmo terapéutico para tumores
+          neuroendocrinos de origen mamario con expresión de SSTR2, donde PRRT
+          (177Lu-DOTATATE) figura como opción tras fallo de terapia hormonal
+          estándar. Las guías SEOM españolas no recogen aún este algoritmo para
+          mama neuroendocrina, lo que explica la discrepancia entre
+          recomendaciones nacionales e internacionales.
+        link: null
+      - ref: 'ENETS Consensus Guidelines, 2023 — European Neuroendocrine Tumor Society'
+        finding: 'Recomendación europea: valoración SSTR2 en NE breast carcinomas avanzados'
+        relevance: >-
+          El consenso ENETS 2023 recomienda valorar expresión de SSTR2 y
+          considerar imagen funcional con DOTATATE en carcinomas
+          neuroendocrinos avanzados para estratificar elegibilidad a terapias
+          dirigidas al receptor de somatostatina, incluyendo PRRT cuando
+          corresponda.
+        link: null
 panelRows:
   - component: NGS amplio (tejido)
     method: Panel ≥500 genes

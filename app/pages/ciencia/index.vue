@@ -44,28 +44,36 @@
         <h2 class="heading-display text-2xl text-ink-950 mb-6">
           {{ $t('ciencia.key_evidence') }}
         </h2>
-        <div class="space-y-4 mb-14">
-          <div v-for="paper in papers" :key="paper.ref" class="card-base">
-            <div class="flex items-start justify-between gap-4">
-              <div>
-                <div class="flex items-center gap-2 mb-2">
-                  <span class="tag-ocean">{{ paper.ref }}</span>
-                </div>
-                <h4 class="font-semibold text-ink-900 text-sm mb-1.5">{{ paper.finding }}</h4>
-                <p class="text-xs text-ink-600 leading-relaxed">{{ paper.relevance }}</p>
-              </div>
-              <a
-                v-if="paper.link"
-                :href="paper.link"
-                target="_blank"
-                rel="noopener"
-                :aria-label="`${$t('ciencia.view_reference')} ${paper.ref} ${locale === 'es' ? '(nueva pestaña)' : '(new tab)'}`"
-                class="shrink-0 mt-1 text-ocean-500 hover:text-ocean-700 transition-colors"
-              >
-                <Icon name="ph:arrow-square-out" class="w-4 h-4" aria-hidden="true" />
-              </a>
+        <div class="space-y-8 mb-14">
+          <section v-for="(section, sectionIndex) in paperSections" :key="`${section.title}-${sectionIndex}`">
+            <div v-if="section.title" class="mb-4">
+              <h3 class="font-display font-semibold text-ink-900 text-lg mb-1.5">{{ section.title }}</h3>
+              <p v-if="section.subtitle" class="text-sm text-ink-700 leading-relaxed">{{ section.subtitle }}</p>
             </div>
-          </div>
+            <div class="space-y-4">
+              <div v-for="paper in section.papers" :key="paper.ref" class="card-base">
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <div class="flex items-center gap-2 mb-2">
+                      <span class="tag-ocean">{{ paper.ref }}</span>
+                    </div>
+                    <h4 class="font-semibold text-ink-900 text-sm mb-1.5">{{ paper.finding }}</h4>
+                    <p class="text-xs text-ink-600 leading-relaxed">{{ paper.relevance }}</p>
+                  </div>
+                  <a
+                    v-if="paper.link"
+                    :href="paper.link"
+                    target="_blank"
+                    rel="noopener"
+                    :aria-label="`${$t('ciencia.view_reference')} ${paper.ref} ${locale === 'es' ? '(nueva pestaña)' : '(new tab)'}`"
+                    class="shrink-0 mt-1 text-ocean-500 hover:text-ocean-700 transition-colors"
+                  >
+                    <Icon name="ph:arrow-square-out" class="w-4 h-4" aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
 
         <section v-if="false">
@@ -200,6 +208,16 @@ const { data: scienceData } = await useAsyncData(`science-data-${locale.value}`,
 }, { watch: [locale] })
 
 const treatments = computed(() => scienceData.value?.treatments ?? [])
-const papers = computed(() => scienceData.value?.papers ?? [])
+const paperSections = computed(() => {
+  if (scienceData.value?.paperSections?.length) {
+    return scienceData.value.paperSections
+  }
+
+  return [{
+    title: '',
+    subtitle: '',
+    papers: scienceData.value?.papers ?? [],
+  }]
+})
 const panelRows = computed(() => scienceData.value?.panelRows ?? [])
 </script>
