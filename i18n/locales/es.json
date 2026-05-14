@@ -104,6 +104,12 @@
     "site_header": "Encabezado del sitio",
     "site_footer": "Pie de página"
   },
+  "entry_disclaimer": {
+    "badge": "Actualización mayo 2026",
+    "title": "Nuevas alteraciones moleculares detectadas",
+    "body": "Las biopsias líquidas Guardant360 y VHIO360 (abril 2026) han revelado nuevas alteraciones moleculares: ESR1 D538G (resistencia endocrina) y 3 mutaciones RB1 (predictor de transición neuroendocrina). El perfil molecular se ha vuelto más complejo y reafirma la necesidad de explorar la vía neuroendocrina en paralelo a la luminal.",
+    "cta": "Entendido"
+  },
   "index": {
     "molecular_profile": "El perfil molecular",
     "see_full_science": "Ver la ciencia completa →",

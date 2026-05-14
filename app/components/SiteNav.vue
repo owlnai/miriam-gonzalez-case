@@ -107,9 +107,10 @@
 const { locale, t } = useI18n()
 const localePath = useLocalePath()
 const switchLocalePath = useSwitchLocalePath()
+const { y } = useWindowScroll()
 
 const mobileOpen = ref(false)
-const scrolled = ref(false)
+const scrolled = computed(() => y.value > 20)
 
 const langAriaLabel = computed(() =>
   locale.value === 'es' ? t('nav.switch_to_en') : t('nav.switch_to_es')
@@ -128,10 +129,4 @@ function toggleLocale() {
   const newLocale = locale.value === 'es' ? 'en' : 'es'
   navigateTo(switchLocalePath(newLocale))
 }
-
-onMounted(() => {
-  window.addEventListener('scroll', () => {
-    scrolled.value = window.scrollY > 20
-  })
-})
 </script>

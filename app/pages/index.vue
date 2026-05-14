@@ -1,6 +1,17 @@
 <template>
   <div>
     <SectionHero />
+    <section class="border-b border-gold-300/50 bg-gradient-to-r from-gold-100 via-ink-50 to-ocean-50">
+      <div class="section-container py-4 sm:py-5">
+        <p class="tag-gold">{{ $t('entry_disclaimer.badge') }}</p>
+        <h2 class="heading-display mt-3 text-xl text-ink-950 sm:text-2xl">
+          {{ $t('entry_disclaimer.title') }}
+        </h2>
+        <p class="mt-3 max-w-4xl text-sm leading-7 text-ink-800 sm:text-base">
+          {{ $t('entry_disclaimer.body') }}
+        </p>
+      </div>
+    </section>
     <SectionCampaign />
 
     <section class="section-spacing" :aria-label="$t('index.molecular_profile')">

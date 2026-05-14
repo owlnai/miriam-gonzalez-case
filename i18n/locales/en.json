@@ -18,7 +18,8 @@
     "close_menu": "Close menu",
     "switch_to_es": "Switch to Spanish",
     "skip_to_content": "Skip to main content",
-    "main_content_label": "Main content"
+    "main_content_label": "Main content",
+    "switch_to_en": "Switch to Spanish"
   },
   "hero": {
     "tagline": "One patient. A unique tumor. A real chance.",
@@ -95,6 +96,12 @@
     "made_with": "Made with care, science, and a lot of AI.",
     "site_header": "Site header",
     "site_footer": "Site footer"
+  },
+  "entry_disclaimer": {
+    "badge": "May 2026 update",
+    "title": "New molecular alterations detected",
+    "body": "Guardant360 and VHIO360 liquid biopsies (April 2026) have revealed new molecular alterations: ESR1 D538G (endocrine resistance) and 3 RB1 mutations (a predictor of neuroendocrine transition). The molecular profile has become more complex and reinforces the need to explore the neuroendocrine pathway in parallel with the luminal one.",
+    "cta": "Continue"
   },
   "index": {
     "molecular_profile": "The molecular profile",
